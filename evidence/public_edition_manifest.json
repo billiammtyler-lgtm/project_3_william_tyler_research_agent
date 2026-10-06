@@ -1,0 +1,45 @@
+{
+  "project_owner": "William Matthew Tyler",
+  "recorded_run_date": "2026-10-05",
+  "notebooks": {
+    "High": {
+      "original_cell_count": 159,
+      "public_cell_count": 72,
+      "code_cell_count": 47,
+      "original_output_blocks_cleared": 39,
+      "code_source_sha256": "a3abaf690d0833d67aca4686e5e2d8e87c4af5139e9609e435418fbb79c5bc4f",
+      "public_has_recorded_cell_outputs": false
+    },
+    "Low": {
+      "original_cell_count": 159,
+      "public_cell_count": 72,
+      "code_cell_count": 47,
+      "original_output_blocks_cleared": 39,
+      "code_source_sha256": "a3abaf690d0833d67aca4686e5e2d8e87c4af5139e9609e435418fbb79c5bc4f",
+      "public_has_recorded_cell_outputs": false
+    }
+  },
+  "answer_records": 48,
+  "judge_verdicts": 48,
+  "omitted": [
+    "course PDFs",
+    "golden_dataset.csv",
+    "course instructions and logos",
+    "all recorded notebook outputs",
+    "raw retrieval contexts/excerpts and raw checkpoint files",
+    "reference-answer fields",
+    "private Colab IDs and screenshots",
+    "credentials and preflight logs"
+  ],
+  "preserved": [
+    "all implementation code cells unchanged",
+    "recorded model answers and metrics",
+    "tool arguments",
+    "context hashes and source labels",
+    "original generated report text",
+    "source-audited report",
+    "retry and canonical-run provenance"
+  ],
+  "original_artifacts_modified": false,
+  "output_portability": "Personal machine paths in curated JSON/text evidence are replaced by bracketed local-path markers."
+}

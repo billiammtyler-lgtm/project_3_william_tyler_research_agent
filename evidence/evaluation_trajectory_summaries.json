@@ -1,0 +1,4656 @@
+{
+  "schema_version": 2,
+  "run_fingerprint": "cc1e8256e803ac84b89ac4b7b7c640d740a4b28a4a0e2d870aa236624d0696f0",
+  "fingerprint_inputs": {
+    "schema_version": 2,
+    "date": "October 05, 2026",
+    "latest_period": "Q2 2026 (quarter ended June 30, 2026)",
+    "models": {
+      "generation": "gpt-4o-mini",
+      "embedding": "text-embedding-3-small",
+      "temperature": 0.0,
+      "max_tokens": null
+    },
+    "backend": "https://aibe.mygreatlearning.com/openai/v1",
+    "prompt_hash": "bf272ed7db381f2f0d33d579b9d934fe718397822ec699eda73c42f7c3102339",
+    "source_hashes": {
+      "ask_agent": "37089bf3a891a856ba443824df823b88445e17322df8b3fadab63b98e1f5065b",
+      "naive_rag": "251b1b12d686858cf912c895e39c7c84f4da27368869f66c8f9a3b6ea217122f",
+      "agent_node": "a3cc3ce660a80a3de1e2dd4d83c48bf3d26b25c21fe9a4bd9e2cee22f59f7966",
+      "tool_node": "75786a7e8b619b83085c1360c9b623280a773c3c79e0a1f601383298d0c1514d",
+      "route_after_agent": "8dffcdafc014e947bc806aac0a9902faffad1c98b7c5cba7124e650f7dc7f48e",
+      "initialize_vector_store": "1c5ea128069c2f41c87315c1e128c5fe0b55487692fd95e1b0e47df6a2da497b",
+      "tavily_web_search_tool": "f0f590333199c1d26916c461270b4c19e48f5ee60ea0d94d21fa5703ca2adeb1",
+      "_safe_error_text": "0a08ecfecc78773ecc8242f319856a31d2d7668e5d9fe03c5c8b570da4e2f47f"
+    },
+    "corpus_hashes": {
+      "GlobalEVOutlook2026.pdf": "7f0e1575fa3679fe195c24b6adfd036c28ac90f7d0680ef127d62b4f481e8300",
+      "golden_dataset.csv": "7b7f0d54b9013ab4763f8e36d9b5c179eda741655b4109b41228222760643022",
+      "rivn-20260630.pdf": "1cf4a0fc447d2a681d9d9b404fb8a6a3b99f1e4839cee0ec4ac0474d1294cacb",
+      "tsla-20251231.pdf": "4133840596327cd7f7182f95a0c133d831cff9a0d1078d07fa40ce912cce5e56",
+      "tsla-20260630.pdf": "b7dd7c058bb76946d99503d6c411bf526d4c7239d8460a31f328b42c12a1ca4a",
+      "TSLA-Q2-2026-Update.pdf": "cf19adfbc01d3959fa9f1b4fe97429c7947c4a687680a337ac6ff20ac8b77bd7"
+    },
+    "retriever": {
+      "type": "mmr",
+      "settings": {
+        "k": 6,
+        "fetch_k": 20
+      }
+    },
+    "questions_hash": "237ce804b74a3cbcc0630c2bd2babf56e36e705bd35aafeed0237cd3afda473f"
+  },
+  "started_at": "2026-10-05T19:27:07.651813",
+  "as_of": "October 05, 2026",
+  "completed_pairs": 24,
+  "ids": [
+    "gold_01",
+    "gold_02",
+    "gold_03",
+    "gold_04",
+    "gold_05",
+    "gold_06",
+    "gold_07",
+    "gold_08",
+    "gold_09",
+    "gold_10",
+    "gold_11",
+    "gold_12",
+    "gold_13",
+    "gold_14",
+    "gold_15",
+    "gold_16",
+    "gold_17",
+    "gold_18",
+    "gold_19",
+    "gold_20",
+    "gold_21",
+    "gold_22",
+    "gold_23",
+    "gold_24"
+  ],
+  "agent_results": [
+    {
+      "question": "What were Tesla's total revenues in Q2 2026?",
+      "answer": "Tesla's total revenues for the three months ended June 30, 2026, were $28,236 million, representing an increase of $5,740 million, or 26%, compared to the same period in 2025 [tsla-20260630.pdf, p. 38].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Tesla total revenues Three Months Ended June 30, 2026"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 2004,
+          "content_sha256": "3fb437eacd9bb7eb5b39a0b50fec2c60c3d26d97978005adbc85c8c29c2c5fd1",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 38
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 948,
+          "content_sha256": "0ca66ce5d5fdad55b773431319ba253f3939158ff54ba4094eda68ff5bd94bbc",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 145
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1968,
+          "content_sha256": "fab2d5494c4a715affdfab059b7d9e3db54e27126a7dd0091e80e873229653b7",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 105,
+          "content_sha256": "b0a49d6c80f4a57ade684be2fc09d58b6a803ec52b58508be1ed8e289daf7f65",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 34
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 739,
+          "content_sha256": "e1b17f5d2b8b16f447c03976b5d4f9a205e41432ab3ef65a31861885e9919c34",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 30
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1913,
+          "content_sha256": "45356b8d556d8bf89ca440bf0b36d3c7e61f074e8baad1b563cc116ed2415141",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 82
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 4.3,
+      "error": null
+    },
+    {
+      "question": "What was Tesla's total GAAP gross margin in Q2 2026?",
+      "answer": "Tesla's total GAAP gross margin for the three months ended June 30, 2026, was 16.8% [tsla-20260630.pdf, p.39].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "total GAAP gross margin Q2 2026"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 357,
+          "content_sha256": "5eebe3ff8ba6fbea465a7296975905c1a4a42497e2307904a91192f0e7895f51",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 765,
+          "content_sha256": "7c6b547e36a5a08e255259a59162b1a16088704f5ff013f947736e7fdff491e3",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 16
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2000,
+          "content_sha256": "94a17b65ace8f352f04c44f5e90409302e5859f4fba4cfc1289ce9b20b33122b",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 31
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2092,
+          "content_sha256": "c032a697ac93ec2aa1b8cf2c8fae13555601d634bff24caad93ff2b0a0c62d94",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 39
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 105,
+          "content_sha256": "11f423b21a4471edd44204e6e3002ff1de2634bf88c71478c330d8bffdfee229",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 27
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1924,
+          "content_sha256": "bb3a605068e994b7a7cd28b2942e1f6fdbd6cd518a8d91cff8ad33b07ab8b4aa",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 32
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 3.3,
+      "error": null
+    },
+    {
+      "question": "How many vehicles did Tesla deliver in Q2 2026?",
+      "answer": "In Q2 2026, Tesla delivered a total of **480,126 vehicles**. This figure represents a 25% increase compared to the same quarter in the previous year [tsla-20260630.pdf, p.34].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "vehicles delivered Three Months Ended June 30, 2026"
+          }
+        },
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "vehicles delivered Q2-2026"
+          }
+        },
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Tesla vehicle deliveries Q2 2026"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 2006,
+          "content_sha256": "2965c3e00e98b26ecf11aae8c4e1f871351d30cdb8f530dc1c28c885abd17b6d",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 56
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 106,
+          "content_sha256": "82bfc6b3878d428e5d4bc022b2aabdeaa6c6a02d7ec4c09ae3f275ce1492ed09",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 52
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2090,
+          "content_sha256": "42c31206b4d70c104a57ede2b33518e584d32bb56c8b513d5fdc1d33a13e8be1",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 38
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2020,
+          "content_sha256": "a03918ca6473c700c6d3e6d1f6d07ddce23b19d9f1b00215c68afad911f69787",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 58
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2101,
+          "content_sha256": "74a31b921a8941d03471ef23b7a270931d7c3a4857ddb53af3bfda1121ea4df1",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 21
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 981,
+          "content_sha256": "72d44224bff7ddf25ecf8da7da080a0eb740dc17612b95dc6e40d83df74b5241",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 28
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1104,
+          "content_sha256": "3b7bdaeb83c7ad3eafa93800c132ea1aa57393835bc73650d2d31f111c698dad",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 23
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1294,
+          "content_sha256": "abe3e38ff401d1d08bcbf9176ce669fe218985872d864ca78398540e48479e6c",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 49
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2006,
+          "content_sha256": "2965c3e00e98b26ecf11aae8c4e1f871351d30cdb8f530dc1c28c885abd17b6d",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 56
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1862,
+          "content_sha256": "efd29a05b5495a1e6f468addadaaf95f6ebcb264704e4062599e95d6680cac76",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 53
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 326,
+          "content_sha256": "6cfa0b0b28b834534781d2b397fedd049463c14eac429896522caa3cc8ffdb8a",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 80
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1651,
+          "content_sha256": "f11144b51e8af3d04afaaf083b5dd3bcfdf1199365205f0e63f0c7d52190c9e8",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 10
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1651,
+          "content_sha256": "f11144b51e8af3d04afaaf083b5dd3bcfdf1199365205f0e63f0c7d52190c9e8",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 10
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 105,
+          "content_sha256": "b0a49d6c80f4a57ade684be2fc09d58b6a803ec52b58508be1ed8e289daf7f65",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 34
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1883,
+          "content_sha256": "1d5aa8de5e2b9f292a9972bc655d0843e0d1bbb6821a869888aaaf4200e01fce",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 5
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1589,
+          "content_sha256": "10c66e5b269259162c05ccde93b58dfb2f875b5a5f8181e2e8d4e17b861bacb9",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 14
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1104,
+          "content_sha256": "3b7bdaeb83c7ad3eafa93800c132ea1aa57393835bc73650d2d31f111c698dad",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 23
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 357,
+          "content_sha256": "5eebe3ff8ba6fbea465a7296975905c1a4a42497e2307904a91192f0e7895f51",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 7.9,
+      "error": null
+    },
+    {
+      "question": "What was Tesla's free cash flow in Q2 2026?",
+      "answer": "Tesla's free cash flow for Q2 2026 was $5,762 million (or $5.76 billion) [TSLA-Q2-2026-Update.pdf, p.31].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "free cash flow Q2 2026"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1081,
+          "content_sha256": "a58eac71b024740eb205b9f8cf4276e8dd046ba3a917cd1095f7f68d606dd922",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2028,
+          "content_sha256": "7749ce810882a10b48dcf3a6c06c3097553c64ebb58a518519d3cc1f7abfc4d7",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 66
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 129,
+          "content_sha256": "28ab0a2388bc2b22c92bcaa5b10194f380e0812531dfe4de676bf73beb8c3f1d",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 1
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2000,
+          "content_sha256": "94a17b65ace8f352f04c44f5e90409302e5859f4fba4cfc1289ce9b20b33122b",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 31
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1161,
+          "content_sha256": "54be8e0fc891368bd3a42262505342db05818b24a0590b2fa84ae1ed143775e0",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 24
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 994,
+          "content_sha256": "fc78dba40f0311332355325055d6fcc20a7bcafa14c07dab0af9a28aa665df8c",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 29
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 3.4,
+      "error": null
+    },
+    {
+      "question": "How much energy storage did Tesla deploy in Q2 2026?",
+      "answer": "In Q2 2026, Tesla deployed **22.3 GWh** of energy storage products [tsla-20260630.pdf, p.35].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "energy storage deployed Q2 2026"
+          }
+        },
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "energy storage deployments Q2 2026"
+          }
+        },
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Tesla energy storage deployments Q2 2026"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 2025,
+          "content_sha256": "ae3ff85bed429d295db91074031039cf8711a395debd952fc6fa335448442205",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 37
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 646,
+          "content_sha256": "c12c592074ac2b13b133b691b08cca6d54fd033f099f35d757592a97cafacc8a",
+          "document_labels": [
+            {
+              "file": "GlobalEVOutlook2026.pdf",
+              "page": 128
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2121,
+          "content_sha256": "a15941e34a9a41289d4cbb227afd79fb6ffef7757d49c823045731238352278f",
+          "document_labels": [
+            {
+              "file": "GlobalEVOutlook2026.pdf",
+              "page": 97
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 129,
+          "content_sha256": "28ab0a2388bc2b22c92bcaa5b10194f380e0812531dfe4de676bf73beb8c3f1d",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 1
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2026,
+          "content_sha256": "28e098f3497a891d476a42390e19ffa8a348e5844132d50ecdf82d95062986ed",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 16
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2029,
+          "content_sha256": "3a2a8a3adea63c0938718a30fe8ddc0b54a00216ae6f025298238bcd5eb4d06f",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 6
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2121,
+          "content_sha256": "a15941e34a9a41289d4cbb227afd79fb6ffef7757d49c823045731238352278f",
+          "document_labels": [
+            {
+              "file": "GlobalEVOutlook2026.pdf",
+              "page": 97
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 302,
+          "content_sha256": "926e26cb8c0d3ba394a74a20059cab70b12fad674193e8dc5d69823570a52286",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 38
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2095,
+          "content_sha256": "cf242da77e1fba18fe3995bb0d743c8ca64608674c6d2cf79d468c631eff7b55",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 7
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 677,
+          "content_sha256": "81fba6d32fda6f1057b1f3cfeed43b50feeda83f1b0b44deadb58fba947db48c",
+          "document_labels": [
+            {
+              "file": "GlobalEVOutlook2026.pdf",
+              "page": 15
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 735,
+          "content_sha256": "a5558a61d46ff87ac2552605d7f0b036c75e203a1bf0e5af61754aa8f7b3a1e4",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2026,
+          "content_sha256": "28e098f3497a891d476a42390e19ffa8a348e5844132d50ecdf82d95062986ed",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 16
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2046,
+          "content_sha256": "03e781986dca91917ebe6ccf1cce2adbf80f0639d8c1a3e755a79a7de25fad00",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 129,
+          "content_sha256": "28ab0a2388bc2b22c92bcaa5b10194f380e0812531dfe4de676bf73beb8c3f1d",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 1
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 302,
+          "content_sha256": "926e26cb8c0d3ba394a74a20059cab70b12fad674193e8dc5d69823570a52286",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 38
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2029,
+          "content_sha256": "3a2a8a3adea63c0938718a30fe8ddc0b54a00216ae6f025298238bcd5eb4d06f",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 6
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2026,
+          "content_sha256": "28e098f3497a891d476a42390e19ffa8a348e5844132d50ecdf82d95062986ed",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 16
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1968,
+          "content_sha256": "fab2d5494c4a715affdfab059b7d9e3db54e27126a7dd0091e80e873229653b7",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 7.1,
+      "error": null
+    },
+    {
+      "question": "What were Tesla's total revenues for fiscal year 2025?",
+      "answer": "Tesla's total revenues for the fiscal year ended December 31, 2025, were $94,827 million [tsla-20251231.pdf, p. 145].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "total revenues Year Ended December 31, 2025"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 948,
+          "content_sha256": "0ca66ce5d5fdad55b773431319ba253f3939158ff54ba4094eda68ff5bd94bbc",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 145
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2095,
+          "content_sha256": "a453fae34ab84b4d15072b13a9af4a068029d368face99d65045e87fc7dad978",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 85
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 861,
+          "content_sha256": "114b057e5fbc30099b32e9f10e02ca105981929540714aeb0e890589b7fd0b77",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 136
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 479,
+          "content_sha256": "0871bbbc033ab352d7caa965e16ab6436214ec81c7447b276a8bfa7d520477a2",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 122
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2033,
+          "content_sha256": "7037a47c40d38519f1283e1c01bf9ca3e8fea5bd465c16b18d2e0f57eb5e2787",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 110
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2095,
+          "content_sha256": "178742591c2e5578058ce73515dab1af6435da77d2b66da7ec34b3ea76cbdd00",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 62
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 3.1,
+      "error": null
+    },
+    {
+      "question": "What was the gross profit of Tesla's energy generation and storage segment in fiscal year 2025?",
+      "answer": "In fiscal year 2025, Tesla's energy generation and storage segment achieved a gross margin of 29.8%. However, the specific gross profit figure for this segment is not directly disclosed in the available documents. The gross margin indicates the percentage of revenue that exceeds the cost of goods sold, but without the total revenue for the energy generation and storage segment, the exact gross profit cannot be calculated.\n\nFor context, the cost of energy generation and storage revenue increased by $1.52 billion, or 20%, in 2025 compared to 2024, which was primarily driven by increases in Megapack and Powerwall deployments [tsla-20251231.pdf, p.66].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Tesla gross profit energy generation and storage Year Ended December 31, 2025"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 2071,
+          "content_sha256": "511cb76772afb7777db324463b2b6c26fbb9a950fae72b1e16b6b6002afc177a",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 66
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 668,
+          "content_sha256": "2ae7a2f704a26e40e0bc56288840e05dd0f25dba3eae021a5dab2d073246b9af",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 11
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2054,
+          "content_sha256": "deb11a63c60f0cb11580453d30f04a9a1e794abc358adfc613e394f1cc1fa7bd",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 54
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2046,
+          "content_sha256": "03e781986dca91917ebe6ccf1cce2adbf80f0639d8c1a3e755a79a7de25fad00",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2073,
+          "content_sha256": "46a17e2ddb93630dae0af058d47e09f9567fcaa4620fa12976c326eb6f7fad3d",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 17
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2026,
+          "content_sha256": "28e098f3497a891d476a42390e19ffa8a348e5844132d50ecdf82d95062986ed",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 16
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 4.4,
+      "error": null
+    },
+    {
+      "question": "How much revenue did Tesla earn from automotive regulatory credits in Q2 2026?",
+      "answer": "In Q2 2026, Tesla earned $145 million from automotive regulatory credits. This represents a significant decrease of $293 million, or 67%, compared to the same quarter in the previous year, Q2 2025, when the revenue from regulatory credits was $438 million [tsla-20260630.pdf, p. 38].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "automotive regulatory credits Q2 2026"
+          }
+        },
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "regulatory credit revenue Q2 2026"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 987,
+          "content_sha256": "00f1a70c9d49faf1e300d9233846f692b52b0df7cb8f4a7146c59d07e53614fa",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 15
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1196,
+          "content_sha256": "db39bfcc06d7c2626f1df98c6515ec1995d47ae5f5b85876a8f84e0e90ce910d",
+          "document_labels": [
+            {
+              "file": "GlobalEVOutlook2026.pdf",
+              "page": 210
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1990,
+          "content_sha256": "086d7f052c709834c4643e77a858c9c7b34cffbe2c621d52efef5926630f360c",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 58
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1312,
+          "content_sha256": "c15a2b40b6458ad6f340a4ad61a25ce29bbd0d1dd411063af81df94ef13ba773",
+          "document_labels": [
+            {
+              "file": "GlobalEVOutlook2026.pdf",
+              "page": 202
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 739,
+          "content_sha256": "e1b17f5d2b8b16f447c03976b5d4f9a205e41432ab3ef65a31861885e9919c34",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 30
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1532,
+          "content_sha256": "024410ccc451d983688d3cd72a2f0cef620e310143417606965f1004e7023c38",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 15
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 251,
+          "content_sha256": "7374a517b6ff873ad47181a2178ad63d26f7383d28430aed7533b9fa737c5d93",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 63
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2101,
+          "content_sha256": "74a31b921a8941d03471ef23b7a270931d7c3a4857ddb53af3bfda1121ea4df1",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 21
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 739,
+          "content_sha256": "e1b17f5d2b8b16f447c03976b5d4f9a205e41432ab3ef65a31861885e9919c34",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 30
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2012,
+          "content_sha256": "b5ab7aa84851fad5eeb812c4bb1938ee3becc0a9cb46467e1c63eb2932715efa",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 19
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1532,
+          "content_sha256": "024410ccc451d983688d3cd72a2f0cef620e310143417606965f1004e7023c38",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 15
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2090,
+          "content_sha256": "42c31206b4d70c104a57ede2b33518e584d32bb56c8b513d5fdc1d33a13e8be1",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 38
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 5.7,
+      "error": null
+    },
+    {
+      "question": "What is the installed annual Model 3/Model Y production capacity at Tesla's Shanghai factory?",
+      "answer": "The installed annual production capacity at Tesla's Shanghai factory for the Model 3 and Model Y is reported to be more than 950,000 vehicles, with some sources indicating it is about one million vehicles [source: https://www.reuters.com/business/autos-transportation/teslas-china-operations-ev-makers-global-production-powerhouse-2026-07-31; source: https://eletric-vehicles.com/tesla/tesla-gigashanghai-exports-surpass-2025-total-in-just-seven-months].",
+      "tools_called": [
+        {
+          "name": "tavily_web_search_tool",
+          "args": {
+            "query": "Tesla Shanghai factory Model 3 Model Y production capacity 2026",
+            "num_results": 5
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 4302,
+          "content_sha256": "2cceb2473aacc0f8a8d445630f15b154a1532dc086e907b2a6af19f0064b5e51",
+          "document_labels": [],
+          "web_source_urls": [
+            "https://www.reuters.com/business/autos-transportation/teslas-china-operations-ev-makers-global-production-powerhouse-2026-07-31",
+            "https://eletric-vehicles.com/tesla/tesla-gigashanghai-exports-surpass-2025-total-in-just-seven-months",
+            "https://www.inc.com/minda-zetlin/tesla-shanghai-gigafactory-factory-weekly-production.html",
+            "https://www.youtube.com/watch?v=ZCo7ox4k4Hg",
+            "https://www.greendrive-accessories.com/blog/language/en/tesla-reaches-a-major-milestone-with-4-million-cars-built-at-giga-shanghai"
+          ],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 5.1,
+      "error": null
+    },
+    {
+      "question": "What were Rivian's total revenues in Q2 2026?",
+      "answer": "Rivian's total revenues for the three months ended June 30, 2026, were $1,658 million [rivn-20260630.pdf, p. 21].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Rivian total revenues Three Months Ended June 30, 2026"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 905,
+          "content_sha256": "fa85e29449eb594ab092608467b7b3d4f28555b41c761b50b642e351dac73a90",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 58
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1184,
+          "content_sha256": "c713eb2b5fe9aedcd8bc0cf01a49885a589ec11a01229732b77fc3f2227bd474",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 42
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2006,
+          "content_sha256": "2965c3e00e98b26ecf11aae8c4e1f871351d30cdb8f530dc1c28c885abd17b6d",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 56
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 106,
+          "content_sha256": "5e463b75dccec7ed348d6efea660d4e51c9f5145061899751d114bf285510ccd",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 92
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2101,
+          "content_sha256": "74a31b921a8941d03471ef23b7a270931d7c3a4857ddb53af3bfda1121ea4df1",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 21
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2052,
+          "content_sha256": "14e10a16b05cbc9794c42e270357fa582fc981c862f57af39fed8cff3f40c66d",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 45
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 5.7,
+      "error": null
+    },
+    {
+      "question": "What were Tesla's revenues from China in Q2 2026?",
+      "answer": "In Q2 2026, Tesla's revenues from China amounted to $4,675 million. This figure represents the revenue generated from sales in China for the three months ended June 30, 2026, compared to $4,305 million for the same period in 2025 [tsla-20260630.pdf, p.33].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "revenues from China Tesla Three Months Ended June 30, 2026"
+          }
+        },
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "revenues by geographic area Tesla Three Months Ended June 30, 2026"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1589,
+          "content_sha256": "10c66e5b269259162c05ccde93b58dfb2f875b5a5f8181e2e8d4e17b861bacb9",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 14
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1022,
+          "content_sha256": "09926abe4e649c3ec64a351fd2fa6841f119afa8c868b3ba1efef402f94c934b",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 117
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 105,
+          "content_sha256": "b0a49d6c80f4a57ade684be2fc09d58b6a803ec52b58508be1ed8e289daf7f65",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 34
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 948,
+          "content_sha256": "0ca66ce5d5fdad55b773431319ba253f3939158ff54ba4094eda68ff5bd94bbc",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 145
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1968,
+          "content_sha256": "fab2d5494c4a715affdfab059b7d9e3db54e27126a7dd0091e80e873229653b7",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2087,
+          "content_sha256": "951b7aaaa5994ca00f62695d751d7d5d16cb626e237d54f020ed358c8144c039",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 14
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2082,
+          "content_sha256": "b944d9006781484ac01c46f413c9ec5d540409588d5304e78af3612fa42be09e",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 33
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2000,
+          "content_sha256": "ba4a6dc2f604560be1a77001a76f671f3c1a30237fe65bd47c996330a1c5e72a",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 89
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1968,
+          "content_sha256": "fab2d5494c4a715affdfab059b7d9e3db54e27126a7dd0091e80e873229653b7",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 105,
+          "content_sha256": "b0a49d6c80f4a57ade684be2fc09d58b6a803ec52b58508be1ed8e289daf7f65",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 34
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2009,
+          "content_sha256": "54a2cf46e09ef7f06260b87b16c59e86e8016bcb0cb09d611f79f51f2a84e602",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 41
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2087,
+          "content_sha256": "951b7aaaa5994ca00f62695d751d7d5d16cb626e237d54f020ed358c8144c039",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 14
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 6.0,
+      "error": null
+    },
+    {
+      "question": "Compare Tesla's Q2 2026 vehicle deliveries with Rivian's Q2 2026 deliveries.",
+      "answer": "In Q2 2026, Tesla and Rivian reported the following vehicle deliveries:\n\n| Company | Vehicle Deliveries (Q2 2026) | Year-over-Year Change |\n|---------|------------------------------|-----------------------|\n| Tesla   | 480,126 vehicles             | 25%                   |\n| Rivian  | 12,194 vehicles              | 14%                   |\n\n- **Tesla** delivered a total of **480,126 vehicles** in the three months ended June 30, 2026, which represents a **25% increase** compared to the same quarter in the previous year [Source: TSLA-Q2-2026-Update.pdf; page: 5].\n- **Rivian** delivered **12,194 vehicles** during the same period, marking a **14% increase** from Q2 2025 [Source: rivn-20260630.pdf; page: 56].\n\nThis comparison highlights Tesla's significantly higher delivery volume compared to Rivian in Q2 2026.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "vehicle deliveries Three Months Ended June 30, 2026 Tesla"
+          }
+        },
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "vehicle deliveries Three Months Ended June 30, 2026 Rivian"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1883,
+          "content_sha256": "1d5aa8de5e2b9f292a9972bc655d0843e0d1bbb6821a869888aaaf4200e01fce",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 5
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2006,
+          "content_sha256": "2965c3e00e98b26ecf11aae8c4e1f871351d30cdb8f530dc1c28c885abd17b6d",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 56
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 105,
+          "content_sha256": "b0a49d6c80f4a57ade684be2fc09d58b6a803ec52b58508be1ed8e289daf7f65",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 34
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1321,
+          "content_sha256": "54f3b10cd003f8befcfed8f6a3edf17f3a2df037f8434773ecf9e40f1597f2df",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 39
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1968,
+          "content_sha256": "fab2d5494c4a715affdfab059b7d9e3db54e27126a7dd0091e80e873229653b7",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2087,
+          "content_sha256": "951b7aaaa5994ca00f62695d751d7d5d16cb626e237d54f020ed358c8144c039",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 14
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2006,
+          "content_sha256": "2965c3e00e98b26ecf11aae8c4e1f871351d30cdb8f530dc1c28c885abd17b6d",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 56
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 106,
+          "content_sha256": "82bfc6b3878d428e5d4bc022b2aabdeaa6c6a02d7ec4c09ae3f275ce1492ed09",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 52
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1981,
+          "content_sha256": "5b64c8eee38cd0079da3bf035c6455f4408a507ed74884f94bbd653d1d48274a",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 37
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2052,
+          "content_sha256": "14e10a16b05cbc9794c42e270357fa582fc981c862f57af39fed8cff3f40c66d",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 45
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 905,
+          "content_sha256": "fa85e29449eb594ab092608467b7b3d4f28555b41c761b50b642e351dac73a90",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 58
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1952,
+          "content_sha256": "26b29af28258fe8d0485a609d4f165ef44ad0fd780804a44533716a0a92e6683",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 56
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 6.3,
+      "error": null
+    },
+    {
+      "question": "What is Tesla's total cash, cash equivalents and investments position?",
+      "answer": "As of June 30, 2026, Tesla's total cash, cash equivalents, and short-term investments amounted to **$43.52 billion**. This figure represents a decrease of $535 million from the end of 2025 [tsla-20260630.pdf, p. 35].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "total cash, cash equivalents and investments position Tesla Three Months Ended June 30, 2026"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1081,
+          "content_sha256": "a58eac71b024740eb205b9f8cf4276e8dd046ba3a917cd1095f7f68d606dd922",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 790,
+          "content_sha256": "cb2ee2361e66dbfc40366c7a4a6e5671258192ef4686fab5b98a5d970c8b427f",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 111
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2003,
+          "content_sha256": "3fef1202ae4a9cf3aa6d513181c0a708d1d9202cd093175dad977f971d960475",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 99
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2082,
+          "content_sha256": "ff422c52e4ea1aa96fae03b9e20180e9ee5e65f8ea4c0830c57fa84b9a75ce64",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 21
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 902,
+          "content_sha256": "a2294e9940bfa9d9aa3e68c281636156a9918ca0250e5e93ea32a3032afa7d57",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 859,
+          "content_sha256": "68108c5b61507c3845c3c05caeb455b078bc0ae07a655787f412904ea07a4730",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 12
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 4.2,
+      "error": null
+    },
+    {
+      "question": "Is Tesla's revenue growing or declining?",
+      "answer": "Tesla's revenue is currently growing. For the three months ended June 30, 2026, Tesla reported total revenues of $28.24 billion, which represents an increase of $5.74 billion compared to $22.50 billion for the same period in the previous year (Q2 2025) [tsla-20260630.pdf, p. 14]. \n\nFor the six months ended June 30, 2026, total revenues were $50.62 billion, up from $41.83 billion during the same period in 2025, marking an increase of $8.79 billion [tsla-20260630.pdf, p. 14].\n\nThis trend indicates that Tesla's revenue is on an upward trajectory, reflecting growth in both the most recent quarter and the first half of the year compared to the same periods in the prior year.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Tesla revenue Q2 2026"
+          }
+        },
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Tesla revenue Year Ended December 31, 2025"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 103,
+          "content_sha256": "2044f6fe1f7ba8ca4f287f05b0e24ab0b8b6e7c17045942f7c49e723d9b5e01c",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 8
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 357,
+          "content_sha256": "5eebe3ff8ba6fbea465a7296975905c1a4a42497e2307904a91192f0e7895f51",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1955,
+          "content_sha256": "d0518bcb55b0e356816668d3a613c6fb9c8b0662bb63c9a94027503a645a5224",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 32
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1968,
+          "content_sha256": "fab2d5494c4a715affdfab059b7d9e3db54e27126a7dd0091e80e873229653b7",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1589,
+          "content_sha256": "10c66e5b269259162c05ccde93b58dfb2f875b5a5f8181e2e8d4e17b861bacb9",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 14
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1651,
+          "content_sha256": "f11144b51e8af3d04afaaf083b5dd3bcfdf1199365205f0e63f0c7d52190c9e8",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 10
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 112,
+          "content_sha256": "e6c5e8af95b57915c3172a031c5d45737f00f9cbc7729ff92f7b18dda705ff32",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 86
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 113,
+          "content_sha256": "67fb49f8f8717a2b645f453ffe93c928e174912dc8f105d8648e4d8d71e4a81a",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 103
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 112,
+          "content_sha256": "583ec4eb1d232e7504665895ef5b39eadbd366dcf5ec24b49afd71e1bb33a411",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 29
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 112,
+          "content_sha256": "cbdb82049ff6ea55f36b1f95bd4eccd32c45dc8d12e110b7259f191f4eb3d199",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 96
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 112,
+          "content_sha256": "cb572e0aff412782354ab5ac2669d64661f76ddefa4e4f7b7b4e73f515e05df0",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 61
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 113,
+          "content_sha256": "cd429e89901330dd87f84e08a1b83d223d2dd49443132fa00dae7b8513258304",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 142
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 5.7,
+      "error": null
+    },
+    {
+      "question": "What was Tesla's free cash flow in its most recent reported quarter?",
+      "answer": "Tesla's free cash flow for the quarter ended June 30, 2026, was $1.0 billion [tsla-20260630.pdf, p. 24].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "free cash flow Three Months Ended June 30, 2026"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 2073,
+          "content_sha256": "cbe5b49ed509ac1fe0a35d6762a88dcd33b719f1b31824c66c009760439c398f",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 43
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2006,
+          "content_sha256": "2965c3e00e98b26ecf11aae8c4e1f871351d30cdb8f530dc1c28c885abd17b6d",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 56
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2009,
+          "content_sha256": "54a2cf46e09ef7f06260b87b16c59e86e8016bcb0cb09d611f79f51f2a84e602",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 41
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1161,
+          "content_sha256": "54be8e0fc891368bd3a42262505342db05818b24a0590b2fa84ae1ed143775e0",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 24
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2028,
+          "content_sha256": "7749ce810882a10b48dcf3a6c06c3097553c64ebb58a518519d3cc1f7abfc4d7",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 66
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2090,
+          "content_sha256": "42c31206b4d70c104a57ede2b33518e584d32bb56c8b513d5fdc1d33a13e8be1",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 38
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 3.6,
+      "error": null
+    },
+    {
+      "question": "Compare Tesla's Q2 2026 total revenues with Ford's Q2 2026 revenues.",
+      "answer": "In Q2 2026, Tesla reported total revenues of **$28,236 million** [tsla-20260630.pdf, p.7]. In comparison, Ford's total revenues for the same quarter were **$48.3 billion** [https://s205.q4cdn.com/882619693/files/doc_financials/2026/q2/Ford-Motor-Company-Q2-2026-Press-Release.pdf].\n\nTo summarize:\n\n| Company | Q2 2026 Total Revenues |\n|---------|------------------------|\n| Tesla   | $28,236 million        |\n| Ford    | $48.3 billion          |\n\nThis indicates that Ford's revenues were significantly higher than Tesla's in the second quarter of 2026.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "total revenues Three Months Ended June 30, 2026 Tesla"
+          }
+        },
+        {
+          "name": "tavily_web_search_tool",
+          "args": {
+            "query": "Ford Q2 2026 revenues",
+            "num_results": 5
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 2063,
+          "content_sha256": "3f840defef5bd2a348ec78a6cff17422461182fc2205cdf4e209ec8dd4cc7866",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 7
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1321,
+          "content_sha256": "54f3b10cd003f8befcfed8f6a3edf17f3a2df037f8434773ecf9e40f1597f2df",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 39
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2032,
+          "content_sha256": "2d5ef69c46d2fa5ce68af6ec7ae93c5f1b48e3db49e47886bfb962c2e4c7c7fd",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 40
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2009,
+          "content_sha256": "54a2cf46e09ef7f06260b87b16c59e86e8016bcb0cb09d611f79f51f2a84e602",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 41
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1968,
+          "content_sha256": "fab2d5494c4a715affdfab059b7d9e3db54e27126a7dd0091e80e873229653b7",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 105,
+          "content_sha256": "b0a49d6c80f4a57ade684be2fc09d58b6a803ec52b58508be1ed8e289daf7f65",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 34
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 4744,
+          "content_sha256": "1bb75d55adfd4089aa91d5bda9e181930ca71c2a8d8cd618dc335cfeec4d64a1",
+          "document_labels": [],
+          "web_source_urls": [
+            "https://s205.q4cdn.com/882619693/files/doc_financials/2026/q2/Ford-Motor-Company-Q2-2026-Press-Release.pdf",
+            "https://www.cnbc.com/2026/07/28/ford-motor-f-earnings-q2-2026.html",
+            "https://www.youtube.com/watch?v=JlzSKWKvt30",
+            "https://finance.yahoo.com/markets/stocks/articles/ford-motor-company-q2-2026-003035679.html",
+            "https://www.fromtheroad.ford.com/us/en/articles/2026/ford-reports-second-quarter-2026-financial-results"
+          ],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 6.2,
+      "error": null
+    },
+    {
+      "question": "How did Tesla's Q2 2026 deliveries compare with BYD's battery-electric vehicle sales in the same quarter?",
+      "answer": "In Q2 2026, Tesla reported total deliveries of **480,126** battery-electric vehicles (BEVs) [TSLA-Q2-2026-Update.pdf, p. 5]. In contrast, BYD delivered **557,090** BEVs during the same period, resulting in a gap of **76,964** units, or approximately **16%** more deliveries for BYD compared to Tesla [https://electriccarsreport.com/2026/07/byd-overtakes-tesla-again-in-q2-2026-ev-sales-as-global-gap-widens]. \n\nThis marks a significant competitive shift, as BYD has regained the lead in global BEV sales, building on its performance from the previous year [https://www.fool.com/investing/2026/07/20/byd-delivered-557090-battery-electric-vehicles-in].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Tesla Q2 2026 deliveries"
+          }
+        },
+        {
+          "name": "tavily_web_search_tool",
+          "args": {
+            "query": "BYD Q2 2026 battery-electric vehicle sales",
+            "num_results": 5
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1651,
+          "content_sha256": "f11144b51e8af3d04afaaf083b5dd3bcfdf1199365205f0e63f0c7d52190c9e8",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 10
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1883,
+          "content_sha256": "1d5aa8de5e2b9f292a9972bc655d0843e0d1bbb6821a869888aaaf4200e01fce",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 5
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 105,
+          "content_sha256": "b0a49d6c80f4a57ade684be2fc09d58b6a803ec52b58508be1ed8e289daf7f65",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 34
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 357,
+          "content_sha256": "5eebe3ff8ba6fbea465a7296975905c1a4a42497e2307904a91192f0e7895f51",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1104,
+          "content_sha256": "3b7bdaeb83c7ad3eafa93800c132ea1aa57393835bc73650d2d31f111c698dad",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 23
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 185,
+          "content_sha256": "cdfd1d172f8d0178bc09480ff7c3abd277cb2acad05860730b03d96503e6fef2",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 13
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 4942,
+          "content_sha256": "f6d8404b465e20bcf9061e5bfb73d2981765930ee168564174578d659655bc74",
+          "document_labels": [],
+          "web_source_urls": [
+            "https://electriccarsreport.com/2026/07/byd-overtakes-tesla-again-in-q2-2026-ev-sales-as-global-gap-widens",
+            "https://www.linkedin.com/posts/robin-singh-694787218_byd-tesla-bydvstesla-activity-7478381186168496128-lVY5",
+            "https://www.electronicsforyou.biz/industry-buzz/byd-leads-global-bev-sales-with-tesla-no-2",
+            "https://www.fool.com/investing/2026/07/20/byd-delivered-557090-battery-electric-vehicles-in",
+            "https://electrek.co/2026/07/01/byd-tesla-q2-2026-bev-sales"
+          ],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 7.8,
+      "error": null
+    },
+    {
+      "question": "Tesla deployed 13.5 GWh of storage in Q2 2026. What is the latest news on Megapack 3 and Megablock production?",
+      "answer": "As of October 2026, Tesla is preparing to ramp up production of its Megapack 3 and Megablock systems at a new factory in Brookshire, Texas. Here are the key updates:\n\n1. **Megapack 3 Production**:\n   - Production of the Megapack 3 is set to begin in late 2026 at the new factory, which has an ambitious target of 50 GWh annual capacity, equating to approximately 10,000 Megapack 3 units per year [source: https://finance.yahoo.com/news/tesla-unveils-megapack-3-megablock-battery-storage-systems-as-car-business-lags-154257699.html].\n   - The factory is designed to significantly enhance Tesla's energy storage capabilities, marking a substantial expansion in their energy division [source: https://www.basenor.com/blogs/news/teslas-texas-megapack-factory-megapack-3-production-starts-2026].\n\n2. **Megablock Production**:\n   - Alongside the Megapack 3, the Megablock system is also set to be produced at the same facility. The Megablock installations are designed to connect multiple units, providing extensive storage solutions suitable for various scales, from small municipalities to larger cities [source: https://finance.yahoo.com/news/tesla-unveils-megapack-3-megablock-battery-storage-systems-as-car-business-lags-154257699.html].\n   - The Megablock system is reported to be 23% faster to install and can operate in extreme temperatures ranging from -40°C to 60°C [source: https://optimusk.blog/blog/tesla-energy-supply-chain].\n\nOverall, Tesla's new factory and the introduction of the Megapack 3 and Megablock systems represent a significant step forward in their energy storage strategy, aiming to meet growing demand in the utility-scale battery market.",
+      "tools_called": [
+        {
+          "name": "tavily_web_search_tool",
+          "args": {
+            "query": "Tesla Megapack 3 news October 2026",
+            "num_results": 5
+          }
+        },
+        {
+          "name": "tavily_web_search_tool",
+          "args": {
+            "query": "Tesla Megablock production news October 2026",
+            "num_results": 5
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 4449,
+          "content_sha256": "bfaa56e4ddb65cf6334c225119a34e21fe4988fea4e6b41c817ba44aae84b1fd",
+          "document_labels": [],
+          "web_source_urls": [
+            "https://www.basenor.com/blogs/news/teslas-texas-megapack-factory-megapack-3-production-starts-2026",
+            "https://finance.yahoo.com/news/tesla-unveils-megapack-3-megablock-battery-storage-systems-as-car-business-lags-154257699.html",
+            "https://optimusk.blog/blog/tesla-energy-supply-chain",
+            "https://www.youtube.com/watch?v=Nq4B4DU7dy0",
+            "https://electrek.co/2026/08/06/tesla-megapack-3-production-starts-texas"
+          ],
+          "raw_text_included": false
+        },
+        {
+          "characters": 4919,
+          "content_sha256": "f8a7ef392f1101f95f0af5535c75ba74918a274e5272ab7e2bb29b521216ee94",
+          "document_labels": [],
+          "web_source_urls": [
+            "https://www.basenor.com/blogs/news/teslas-texas-megapack-factory-megapack-3-production-starts-2026",
+            "https://www.teslaacessories.com/blogs/news/tesla-energy's-2026-surge-how-megapack-deployments-and-us-battery-production-are-powering-the-future-for-owners",
+            "https://finance.yahoo.com/news/tesla-unveils-megapack-3-megablock-battery-storage-systems-as-car-business-lags-154257699.html",
+            "https://optimusk.blog/blog/tesla-energy-supply-chain",
+            "https://www.youtube.com/watch?v=wNSS19XKXRE&vl=en"
+          ],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 11.4,
+      "error": null
+    },
+    {
+      "question": "What is the latest analyst consensus for Tesla's Q3 2026 vehicle deliveries?",
+      "answer": "The latest analyst consensus for Tesla's Q3 2026 vehicle deliveries is 461,974 vehicles. This estimate was compiled from forecasts by 24 financial institutions. Tesla ultimately delivered 486,532 vehicles in the third quarter, exceeding the consensus by 24,558 vehicles, or approximately 5.3% [source: https://teslanorth.com/2026/10/02/tesla-q3-2026-deliveries].",
+      "tools_called": [
+        {
+          "name": "tavily_web_search_tool",
+          "args": {
+            "query": "Tesla Q3 2026 vehicle deliveries analyst consensus",
+            "num_results": 5
+          }
+        },
+        {
+          "name": "tavily_web_search_tool",
+          "args": {
+            "query": "Tesla vehicle deliveries forecast Q3 2026",
+            "num_results": 5
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 4851,
+          "content_sha256": "cca2c6dff60e254ea88cc3a4823eab626ece4e54b8fde96a601ac8f1ea252788",
+          "document_labels": [],
+          "web_source_urls": [
+            "https://teslanorth.com/2026/09/29/tesla-ir-q3-2026-delivery-consensus",
+            "https://teslanorth.com/2026/10/02/tesla-q3-2026-deliveries",
+            "https://www.notateslaapp.com/news/4751/tesla-shares-q3-2026-analyst-delivery-consensus",
+            "https://www.notateslaapp.com/news/4759/tesla-announces-q3-2026-vehicle-deliveries-beating-analyst-estimates",
+            "https://ir.tesla.com/press-release/delivery-consensus-third-quarter-2026"
+          ],
+          "raw_text_included": false
+        },
+        {
+          "characters": 4908,
+          "content_sha256": "43095c8d88bd70ea453aadccc146f7bca6ab1cff75794c82e66ec8847ef187ee",
+          "document_labels": [],
+          "web_source_urls": [
+            "https://finance.yahoo.com/markets/stocks/articles/tesla-q3-2026-vehicle-deliveries-133404513.html?fr=sycsrp_catchall",
+            "https://www.notateslaapp.com/news/4759/tesla-announces-q3-2026-vehicle-deliveries-beating-analyst-estimates",
+            "https://www.notateslaapp.com/news/4751/tesla-shares-q3-2026-analyst-delivery-consensus",
+            "https://www.cnbc.com/2026/10/02/tesla-tsla-q3-2026-vehicle-delivery-production.html",
+            "https://teslanorth.com/2026/10/02/tesla-q3-2026-deliveries"
+          ],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 9.0,
+      "error": null
+    },
+    {
+      "question": "What were the most significant Tesla news stories in September 2026?",
+      "answer": "In September 2026, several significant news stories emerged regarding Tesla:\n\n1. **Quarterly Deliveries**: Tesla reported a 2% year-over-year decline in deliveries for the third quarter of 2026, totaling 486,532 vehicles. This figure was slightly better than analysts' expectations, which had predicted a larger decline of 7%. The previous year's deliveries for the same quarter were 497,099 vehicles [source: https://electrek.co/2026/10/02/tesla-q3-2026-deliveries-486532].\n\n2. **Launch of the Cybercab**: Tesla's new autonomous taxi service, the \"Cybercab,\" launched in Austin, Texas, faced challenges in its first month. Surveys indicated that 50% of U.S. respondents were uncomfortable with the idea of riding in a robotaxi that lacks a steering wheel or pedals. This launch is part of Tesla's broader strategy to expand its autonomous vehicle offerings [source: https://www.cnbc.com/2026/10/03/tesla-cybercab-pressure-to-expand-after-rocky-first-month-in-austin.html].\n\n3. **Sales Performance**: Despite the overall decline in deliveries, Tesla's Model 3 saw a significant increase in sales, which helped offset a drop in Model Y sales. This performance was noted as being strong even without the typical end-of-quarter surge [source: https://thedriven.io/2026/10/02/tesla-sales-come-off-the-boil-due-to-shipment-dates-but-model-3-leaps-ahead-before-release-of-cut-price-model].\n\n4. **Financial Outlook**: Tesla's capital expenditures for 2026 are expected to exceed $25 billion as the company invests in expanding its Robotaxi fleet, production capabilities, and other infrastructure. However, the company reported a negative free cash flow of $1.1 billion in the second quarter of 2026, raising concerns about its financial health [source: https://finance.yahoo.com/markets/stocks/articles/tesla-stock-buy-september-2026-105400122.html].\n\nThese stories highlight Tesla's ongoing challenges and strategic initiatives as it navigates a competitive electric vehicle market.",
+      "tools_called": [
+        {
+          "name": "tavily_web_search_tool",
+          "args": {
+            "query": "Tesla news September 2026",
+            "time_range": "month"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 4924,
+          "content_sha256": "6ecf3dc49322f81f25d9070bba2ad2abc6daa71820896d123fb002c9c86c5547",
+          "document_labels": [],
+          "web_source_urls": [
+            "https://www.youtube.com/watch?v=CWROepENkOI",
+            "https://www.cnbc.com/2026/10/03/tesla-cybercab-pressure-to-expand-after-rocky-first-month-in-austin.html",
+            "https://thedriven.io/2026/10/02/tesla-sales-come-off-the-boil-due-to-shipment-dates-but-model-3-leaps-ahead-before-release-of-cut-price-model",
+            "https://finance.yahoo.com/markets/stocks/articles/tesla-stock-buy-september-2026-105400122.html",
+            "https://electrek.co/2026/10/02/tesla-q3-2026-deliveries-486532"
+          ],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 7.8,
+      "error": null
+    },
+    {
+      "question": "What is Tesla's current market capitalisation?",
+      "answer": "As of October 5, 2026, Tesla's market capitalization is approximately $1.496 trillion [source: https://finance.yahoo.com/quote/TSLA].",
+      "tools_called": [
+        {
+          "name": "tavily_web_search_tool",
+          "args": {
+            "query": "Tesla current market capitalisation",
+            "num_results": 5
+          }
+        },
+        {
+          "name": "tavily_web_search_tool",
+          "args": {
+            "query": "Tesla market cap October 2026",
+            "num_results": 5
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 4230,
+          "content_sha256": "c5160fa178b6d1d020ec513d305e5fdbed07d652cd65bb8bd392f96c0cc8f63c",
+          "document_labels": [],
+          "web_source_urls": [
+            "https://tradingeconomics.com/tsla:us:market-capitalization",
+            "https://finance.yahoo.com/news/global-companies-market-cap-tesla-114737468.html",
+            "https://coinmarketcap.com/fr/currencies/tesla-tokenized-stock-hyperliquid",
+            "https://coinmarketcap.com/fr/currencies/tesla-tokenized-stock-ondo",
+            "https://companiesmarketcap.com/tesla/marketcap"
+          ],
+          "raw_text_included": false
+        },
+        {
+          "characters": 4268,
+          "content_sha256": "caffe09c723818e9568c998c62c1112ba9d55617bc466d4513586e5bb2058517",
+          "document_labels": [],
+          "web_source_urls": [
+            "https://finance.yahoo.com/quote/TSLA",
+            "https://capital.com/en-int/markets/shares/tesla-inc-share-price/market-cap",
+            "https://robinhood.com/us/en/stocks/TSLA",
+            "https://public.com/stocks/tsla/market-cap",
+            "https://www.youtube.com/watch?v=lboXutn-CBs"
+          ],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 7.2,
+      "error": null
+    },
+    {
+      "question": "What gross margin did Tesla earn on the Cybertruck alone in Q2 2026?",
+      "answer": "The gross margin for the Cybertruck specifically in Q2 2026 is not disclosed in the available documents. Tesla's overall automotive gross margin for the same period was reported at 16.9% [tsla-20260630.pdf, p.39]. However, there are no specific figures or details regarding the gross margin earned on the Cybertruck alone.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "gross margin Cybertruck Q2 2026"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 357,
+          "content_sha256": "5eebe3ff8ba6fbea465a7296975905c1a4a42497e2307904a91192f0e7895f51",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1990,
+          "content_sha256": "086d7f052c709834c4643e77a858c9c7b34cffbe2c621d52efef5926630f360c",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 58
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1321,
+          "content_sha256": "54f3b10cd003f8befcfed8f6a3edf17f3a2df037f8434773ecf9e40f1597f2df",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 39
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2029,
+          "content_sha256": "3a2a8a3adea63c0938718a30fe8ddc0b54a00216ae6f025298238bcd5eb4d06f",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 6
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2047,
+          "content_sha256": "10b2db63001625af254a698716253a037d825e7d4e7b741330d3a92cb831fa12",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 30
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 198,
+          "content_sha256": "885aecc4c987f954f3e2e001729532b76e61a9ab50f057a73d5290cc5bab6e7b",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 17
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 3.8,
+      "error": null
+    },
+    {
+      "question": "What is Tesla's internal research and development budget for the year 2030?",
+      "answer": "The search did not yield specific information regarding Tesla's internal research and development budget for the year 2030. As of now, there are no disclosed figures or projections available for that specific year. If you have any other questions or need information on a different topic, feel free to ask!",
+      "tools_called": [
+        {
+          "name": "tavily_web_search_tool",
+          "args": {
+            "query": "Tesla internal research and development budget 2030",
+            "num_results": 5
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 4406,
+          "content_sha256": "2653e5654ce3b7a91eb173995ebe2daebd47b78ef549520903cd99c1b52a3931",
+          "document_labels": [],
+          "web_source_urls": [
+            "https://www.youtube.com/watch?v=c_s2_-4nGPY",
+            "https://electrek.co/2022/03/24/tesla-spends-most-rd-least-advertising-car-sold",
+            "https://finance.yahoo.com/news/tesla-humanoid-robots-internal-2025-145512293.html",
+            "https://finance.yahoo.com/news/software-defined-vehicle-sdv-market-153300417.html",
+            "https://ir.tesla.com/_flysystem/s3/sec/000162828026003952/tsla-20251231-gen.pdf"
+          ],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 4.6,
+      "error": null
+    },
+    {
+      "question": "How much revenue did Tesla's Berlin factory generate in Q2 2026?",
+      "answer": "The revenue generated by Tesla's Berlin factory in Q2 2026 is not explicitly detailed in the available documents. Tesla's total revenues for the three months ended June 30, 2026, were reported as $28,236 million, but there is no specific breakdown provided for the Berlin factory's contribution to this total [tsla-20260630.pdf, p. 38]. \n\nIf you need more specific information about the Berlin factory's performance, it may not be disclosed in the current filings.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Berlin factory revenue Q2 2026"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1651,
+          "content_sha256": "f11144b51e8af3d04afaaf083b5dd3bcfdf1199365205f0e63f0c7d52190c9e8",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 10
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1320,
+          "content_sha256": "8ec50ebe10c6817806a99bf1770d98c1eca73335647ecb332b49afcb314ba88c",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 23
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2004,
+          "content_sha256": "3fb437eacd9bb7eb5b39a0b50fec2c60c3d26d97978005adbc85c8c29c2c5fd1",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 38
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1990,
+          "content_sha256": "086d7f052c709834c4643e77a858c9c7b34cffbe2c621d52efef5926630f360c",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 58
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 105,
+          "content_sha256": "b0a49d6c80f4a57ade684be2fc09d58b6a803ec52b58508be1ed8e289daf7f65",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 34
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1968,
+          "content_sha256": "fab2d5494c4a715affdfab059b7d9e3db54e27126a7dd0091e80e873229653b7",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 3.7,
+      "error": null
+    }
+  ],
+  "rag_results": [
+    {
+      "question": "What were Tesla's total revenues in Q2 2026?",
+      "answer": "Tesla's total revenues in Q2 2026 were $28.2 billion, which represents a 26% increase year-over-year [TSLA-Q2-2026-Update.pdf, p. 25].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What were Tesla's total revenues in Q2 2026?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1813,
+          "content_sha256": "4455abf2acfb01c74fadae251d1429f708442c56ba8c3acc112124d82c202612",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 25
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 948,
+          "content_sha256": "0ca66ce5d5fdad55b773431319ba253f3939158ff54ba4094eda68ff5bd94bbc",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 145
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 105,
+          "content_sha256": "b0a49d6c80f4a57ade684be2fc09d58b6a803ec52b58508be1ed8e289daf7f65",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 34
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2061,
+          "content_sha256": "10cbf584b4a33c01db34c0af9dfdbd40756426427ed76da7117ca04fa62c5c59",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 62
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2087,
+          "content_sha256": "951b7aaaa5994ca00f62695d751d7d5d16cb626e237d54f020ed358c8144c039",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 14
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1081,
+          "content_sha256": "a58eac71b024740eb205b9f8cf4276e8dd046ba3a917cd1095f7f68d606dd922",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 2.0
+    },
+    {
+      "question": "What was Tesla's total GAAP gross margin in Q2 2026?",
+      "answer": "Tesla's total GAAP gross margin in Q2 2026 was 16.9% [tsla-20260630.pdf, p.39].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What was Tesla's total GAAP gross margin in Q2 2026?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 739,
+          "content_sha256": "e1b17f5d2b8b16f447c03976b5d4f9a205e41432ab3ef65a31861885e9919c34",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 30
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1251,
+          "content_sha256": "538ac77bb877589bc577a9f69f249b644d1091289f6f00878eb4c8264dc34e6f",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 64
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 765,
+          "content_sha256": "7c6b547e36a5a08e255259a59162b1a16088704f5ff013f947736e7fdff491e3",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 16
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2032,
+          "content_sha256": "2d5ef69c46d2fa5ce68af6ec7ae93c5f1b48e3db49e47886bfb962c2e4c7c7fd",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 40
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1321,
+          "content_sha256": "54f3b10cd003f8befcfed8f6a3edf17f3a2df037f8434773ecf9e40f1597f2df",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 39
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 357,
+          "content_sha256": "5eebe3ff8ba6fbea465a7296975905c1a4a42497e2307904a91192f0e7895f51",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 1.8
+    },
+    {
+      "question": "How many vehicles did Tesla deliver in Q2 2026?",
+      "answer": "Tesla delivered 480,126 vehicles in Q2 2026 [TSLA-Q2-2026-Update.pdf, p. 5].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "How many vehicles did Tesla deliver in Q2 2026?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1883,
+          "content_sha256": "1d5aa8de5e2b9f292a9972bc655d0843e0d1bbb6821a869888aaaf4200e01fce",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 5
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 105,
+          "content_sha256": "b0a49d6c80f4a57ade684be2fc09d58b6a803ec52b58508be1ed8e289daf7f65",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 34
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1968,
+          "content_sha256": "fab2d5494c4a715affdfab059b7d9e3db54e27126a7dd0091e80e873229653b7",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1651,
+          "content_sha256": "f11144b51e8af3d04afaaf083b5dd3bcfdf1199365205f0e63f0c7d52190c9e8",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 10
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 357,
+          "content_sha256": "5eebe3ff8ba6fbea465a7296975905c1a4a42497e2307904a91192f0e7895f51",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1813,
+          "content_sha256": "4455abf2acfb01c74fadae251d1429f708442c56ba8c3acc112124d82c202612",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 25
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 1.8
+    },
+    {
+      "question": "What was Tesla's free cash flow in Q2 2026?",
+      "answer": "The information is not available in the provided documents.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What was Tesla's free cash flow in Q2 2026?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1081,
+          "content_sha256": "a58eac71b024740eb205b9f8cf4276e8dd046ba3a917cd1095f7f68d606dd922",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 555,
+          "content_sha256": "22cdc9da329e2dd952b993005e58a8e2280f5c3ab1a4aa4467c543d7edcf1810",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 27
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1161,
+          "content_sha256": "54be8e0fc891368bd3a42262505342db05818b24a0590b2fa84ae1ed143775e0",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 24
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1119,
+          "content_sha256": "084f1c151669ac7e49de27cd3fd0d864582d3ddb4511a863651a1f61ab38e70c",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 3
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2069,
+          "content_sha256": "e502c14370b59721b28cb2dcd418dfb3038f8ab3ef63c9ad67bb18f685f5ae93",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 70
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 994,
+          "content_sha256": "fc78dba40f0311332355325055d6fcc20a7bcafa14c07dab0af9a28aa665df8c",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 29
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 1.6
+    },
+    {
+      "question": "How much energy storage did Tesla deploy in Q2 2026?",
+      "answer": "The information is not available in the provided documents.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "How much energy storage did Tesla deploy in Q2 2026?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 2046,
+          "content_sha256": "03e781986dca91917ebe6ccf1cce2adbf80f0639d8c1a3e755a79a7de25fad00",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 513,
+          "content_sha256": "daa50d15b898bb3bf4ae3bc199233501c5663d14b79108bef8d1e50d5b7b9479",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 7
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1081,
+          "content_sha256": "a58eac71b024740eb205b9f8cf4276e8dd046ba3a917cd1095f7f68d606dd922",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 302,
+          "content_sha256": "926e26cb8c0d3ba394a74a20059cab70b12fad674193e8dc5d69823570a52286",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 38
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2029,
+          "content_sha256": "3a2a8a3adea63c0938718a30fe8ddc0b54a00216ae6f025298238bcd5eb4d06f",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 6
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2026,
+          "content_sha256": "28e098f3497a891d476a42390e19ffa8a348e5844132d50ecdf82d95062986ed",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 16
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 2.6
+    },
+    {
+      "question": "What were Tesla's total revenues for fiscal year 2025?",
+      "answer": "Tesla's total revenues for fiscal year 2025 were $94,827 million [tsla-20251231.pdf, p. 82].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What were Tesla's total revenues for fiscal year 2025?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 948,
+          "content_sha256": "0ca66ce5d5fdad55b773431319ba253f3939158ff54ba4094eda68ff5bd94bbc",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 145
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2086,
+          "content_sha256": "2476c04b39ae9682b5dc3be48e4124abfdd8ab06ca124fec7dba90cd1fa3dad7",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 58
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1813,
+          "content_sha256": "4455abf2acfb01c74fadae251d1429f708442c56ba8c3acc112124d82c202612",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 25
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 819,
+          "content_sha256": "43c502c0ce3b5b055bf124e4e344c8c1ba8cb67482efe169c97da19cb2dfa583",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 54
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1913,
+          "content_sha256": "45356b8d556d8bf89ca440bf0b36d3c7e61f074e8baad1b563cc116ed2415141",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 82
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 113,
+          "content_sha256": "67fb49f8f8717a2b645f453ffe93c928e174912dc8f105d8648e4d8d71e4a81a",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 103
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 1.8
+    },
+    {
+      "question": "What was the gross profit of Tesla's energy generation and storage segment in fiscal year 2025?",
+      "answer": "The gross profit of Tesla's energy generation and storage segment in fiscal year 2025 was $3,802 million [tsla-20251231.pdf, p.64].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What was the gross profit of Tesla's energy generation and storage segment in fiscal year 2025?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1251,
+          "content_sha256": "538ac77bb877589bc577a9f69f249b644d1091289f6f00878eb4c8264dc34e6f",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 64
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 668,
+          "content_sha256": "2ae7a2f704a26e40e0bc56288840e05dd0f25dba3eae021a5dab2d073246b9af",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 11
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 948,
+          "content_sha256": "0ca66ce5d5fdad55b773431319ba253f3939158ff54ba4094eda68ff5bd94bbc",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 145
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2071,
+          "content_sha256": "511cb76772afb7777db324463b2b6c26fbb9a950fae72b1e16b6b6002afc177a",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 66
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2054,
+          "content_sha256": "deb11a63c60f0cb11580453d30f04a9a1e794abc358adfc613e394f1cc1fa7bd",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 54
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1176,
+          "content_sha256": "f66c279235b76fee65fe754e6777b71409dffe0e321b4cbb41da16c50f0f4994",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 91
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 2.0
+    },
+    {
+      "question": "How much revenue did Tesla earn from automotive regulatory credits in Q2 2026?",
+      "answer": "Tesla earned $146 million from automotive regulatory credits in Q2 2026 [tsla-20260630.pdf, p. 14].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "How much revenue did Tesla earn from automotive regulatory credits in Q2 2026?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1589,
+          "content_sha256": "10c66e5b269259162c05ccde93b58dfb2f875b5a5f8181e2e8d4e17b861bacb9",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 14
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 987,
+          "content_sha256": "00f1a70c9d49faf1e300d9233846f692b52b0df7cb8f4a7146c59d07e53614fa",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 15
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 739,
+          "content_sha256": "e1b17f5d2b8b16f447c03976b5d4f9a205e41432ab3ef65a31861885e9919c34",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 30
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 840,
+          "content_sha256": "c6a528f9ba543c7cab23fa35c1f6deec0eaea6ab013eb7f12a23ffd91a87324f",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 62
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 251,
+          "content_sha256": "7374a517b6ff873ad47181a2178ad63d26f7383d28430aed7533b9fa737c5d93",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 63
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2086,
+          "content_sha256": "cb586759aa855e092c943445d99986dd01bcc116727644ff585f4baf6db614ec",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 90
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 1.7
+    },
+    {
+      "question": "What is the installed annual Model 3/Model Y production capacity at Tesla's Shanghai factory?",
+      "answer": "The installed annual Model 3 / Model Y production capacity at Tesla's Shanghai factory is >950,000 [TSLA-Q2-2026-Update.pdf, p.6].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What is the installed annual Model 3/Model Y production capacity at Tesla's Shanghai factory?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 2029,
+          "content_sha256": "3a2a8a3adea63c0938718a30fe8ddc0b54a00216ae6f025298238bcd5eb4d06f",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 6
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2046,
+          "content_sha256": "c1d6d8480c28b98d7efab4f22761090467475d89f5439451e7fd458127a8a495",
+          "document_labels": [
+            {
+              "file": "GlobalEVOutlook2026.pdf",
+              "page": 37
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1160,
+          "content_sha256": "30087a0ade0204796b4a6bc61c8bf2bc4529528e342a6e6bfb3efc52d62cde15",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 25
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1435,
+          "content_sha256": "f78544a81b7160c44f3a76f520f5dfe45eaf4aafdd1d96fb1dd9b8fca06144f8",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 50
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1883,
+          "content_sha256": "1d5aa8de5e2b9f292a9972bc655d0843e0d1bbb6821a869888aaaf4200e01fce",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 5
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1996,
+          "content_sha256": "6f367cf80d1619aad33f242052d77cfed82691169e4d099d590aee267a2aacd0",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 2.5
+    },
+    {
+      "question": "What were Rivian's total revenues in Q2 2026?",
+      "answer": "Rivian's total revenues in Q2 2026 were $1,658 million, which includes $1,143 million from the Automotive segment and $515 million from Software and Services [rivn-20260630.pdf, p.42].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What were Rivian's total revenues in Q2 2026?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 905,
+          "content_sha256": "fa85e29449eb594ab092608467b7b3d4f28555b41c761b50b642e351dac73a90",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 58
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 438,
+          "content_sha256": "2ff714910772a1e6099780e72cf53ae89a62fcc54f8ad083288c5b19f8c54e78",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 55
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1184,
+          "content_sha256": "c713eb2b5fe9aedcd8bc0cf01a49885a589ec11a01229732b77fc3f2227bd474",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 42
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2052,
+          "content_sha256": "14e10a16b05cbc9794c42e270357fa582fc981c862f57af39fed8cff3f40c66d",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 45
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 107,
+          "content_sha256": "49783d37e7ac581282ce80f60f6e80957d4e0f611ac6a2b94798158bd2a95b34",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 114
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1952,
+          "content_sha256": "26b29af28258fe8d0485a609d4f165ef44ad0fd780804a44533716a0a92e6683",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 56
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 2.0
+    },
+    {
+      "question": "What were Tesla's revenues from China in Q2 2026?",
+      "answer": "The information is not available in the provided documents.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What were Tesla's revenues from China in Q2 2026?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 948,
+          "content_sha256": "0ca66ce5d5fdad55b773431319ba253f3939158ff54ba4094eda68ff5bd94bbc",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 145
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 739,
+          "content_sha256": "e1b17f5d2b8b16f447c03976b5d4f9a205e41432ab3ef65a31861885e9919c34",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 30
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1081,
+          "content_sha256": "a58eac71b024740eb205b9f8cf4276e8dd046ba3a917cd1095f7f68d606dd922",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2090,
+          "content_sha256": "42c31206b4d70c104a57ede2b33518e584d32bb56c8b513d5fdc1d33a13e8be1",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 38
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2026,
+          "content_sha256": "28e098f3497a891d476a42390e19ffa8a348e5844132d50ecdf82d95062986ed",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 16
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2063,
+          "content_sha256": "3f840defef5bd2a348ec78a6cff17422461182fc2205cdf4e209ec8dd4cc7866",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 7
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 1.5
+    },
+    {
+      "question": "Compare Tesla's Q2 2026 vehicle deliveries with Rivian's Q2 2026 deliveries.",
+      "answer": "In Q2 2026, Tesla delivered 480,126 vehicles [TSLA-Q2-2026-Update.pdf, p. 5], while Rivian delivered 12,194 vehicles [rivn-20260630.pdf, p. 55].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Compare Tesla's Q2 2026 vehicle deliveries with Rivian's Q2 2026 deliveries."
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 2052,
+          "content_sha256": "14e10a16b05cbc9794c42e270357fa582fc981c862f57af39fed8cff3f40c66d",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 45
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1104,
+          "content_sha256": "3b7bdaeb83c7ad3eafa93800c132ea1aa57393835bc73650d2d31f111c698dad",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 23
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 438,
+          "content_sha256": "2ff714910772a1e6099780e72cf53ae89a62fcc54f8ad083288c5b19f8c54e78",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 55
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2006,
+          "content_sha256": "2965c3e00e98b26ecf11aae8c4e1f871351d30cdb8f530dc1c28c885abd17b6d",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 56
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 616,
+          "content_sha256": "efcf3d10ea4f7b41cbd6a4748c025ddc0e60950cc596de57b69004f45dbe84e5",
+          "document_labels": [
+            {
+              "file": "rivn-20260630.pdf",
+              "page": 77
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1883,
+          "content_sha256": "1d5aa8de5e2b9f292a9972bc655d0843e0d1bbb6821a869888aaaf4200e01fce",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 5
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 2.0
+    },
+    {
+      "question": "What is Tesla's total cash, cash equivalents and investments position?",
+      "answer": "As of June 30, 2026, Tesla's total cash, cash equivalents, and short-term investments amounted to $43.52 billion, which represents a decrease of $535 million from the end of 2025, when the total was $44.06 billion [tsla-20260630.pdf, p.35].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What is Tesla's total cash, cash equivalents and investments position?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 2003,
+          "content_sha256": "3fef1202ae4a9cf3aa6d513181c0a708d1d9202cd093175dad977f971d960475",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 99
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 994,
+          "content_sha256": "fc78dba40f0311332355325055d6fcc20a7bcafa14c07dab0af9a28aa665df8c",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 29
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1081,
+          "content_sha256": "a58eac71b024740eb205b9f8cf4276e8dd046ba3a917cd1095f7f68d606dd922",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 790,
+          "content_sha256": "cb2ee2361e66dbfc40366c7a4a6e5671258192ef4686fab5b98a5d970c8b427f",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 111
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1606,
+          "content_sha256": "3f79a33e61e04f9295876f1b0245aa85103720ce7a5a9bddcbe39953d40e7558",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 17
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2082,
+          "content_sha256": "ff422c52e4ea1aa96fae03b9e20180e9ee5e65f8ea4c0830c57fa84b9a75ce64",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 21
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 2.4
+    },
+    {
+      "question": "Is Tesla's revenue growing or declining?",
+      "answer": "Tesla's revenue is growing. Total quarterly revenue increased 26% year-over-year (YoY) to $28.2B in Q2 2026 [TSLA-Q2-2026-Update.pdf, p. 25].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Is Tesla's revenue growing or declining?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1813,
+          "content_sha256": "4455abf2acfb01c74fadae251d1429f708442c56ba8c3acc112124d82c202612",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 25
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2099,
+          "content_sha256": "fcca7248435421419e1a23f0a1786c9a2509ab8ffda5eb49996ea2b1b210308d",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 28
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2086,
+          "content_sha256": "2476c04b39ae9682b5dc3be48e4124abfdd8ab06ca124fec7dba90cd1fa3dad7",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 58
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 983,
+          "content_sha256": "3c425b7f55ca82e1ffa8ca55cbf18f6d9ae0ca597e26c0328f3af6060465af7a",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 72
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1913,
+          "content_sha256": "45356b8d556d8bf89ca440bf0b36d3c7e61f074e8baad1b563cc116ed2415141",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 82
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 357,
+          "content_sha256": "5eebe3ff8ba6fbea465a7296975905c1a4a42497e2307904a91192f0e7895f51",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 2.4
+    },
+    {
+      "question": "What was Tesla's free cash flow in its most recent reported quarter?",
+      "answer": "Tesla's free cash flow in its most recent reported quarter, Q2 2026, was $5.762 billion [TSLA-Q2-2026-Update.pdf, p.31].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What was Tesla's free cash flow in its most recent reported quarter?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1081,
+          "content_sha256": "a58eac71b024740eb205b9f8cf4276e8dd046ba3a917cd1095f7f68d606dd922",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2000,
+          "content_sha256": "94a17b65ace8f352f04c44f5e90409302e5859f4fba4cfc1289ce9b20b33122b",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 31
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2087,
+          "content_sha256": "473fc4f1f8a9bb651c58cb376c5e4a4347247bc77f0f6395e51be72b50493734",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 87
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2048,
+          "content_sha256": "e10c627bfba26bb79932557022e9762c8a29dbddacfe65cf35a4c069b5827b99",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 3
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 994,
+          "content_sha256": "fc78dba40f0311332355325055d6fcc20a7bcafa14c07dab0af9a28aa665df8c",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 29
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1913,
+          "content_sha256": "45356b8d556d8bf89ca440bf0b36d3c7e61f074e8baad1b563cc116ed2415141",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 82
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 1.9
+    },
+    {
+      "question": "Compare Tesla's Q2 2026 total revenues with Ford's Q2 2026 revenues.",
+      "answer": "The information regarding Ford's Q2 2026 revenues is not available in the provided documents. Therefore, I cannot compare Tesla's Q2 2026 total revenues with Ford's Q2 2026 revenues. Tesla's Q2 2026 total revenues were $28,236 million [tsla-20260630.pdf, p.14].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Compare Tesla's Q2 2026 total revenues with Ford's Q2 2026 revenues."
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 739,
+          "content_sha256": "e1b17f5d2b8b16f447c03976b5d4f9a205e41432ab3ef65a31861885e9919c34",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 30
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2061,
+          "content_sha256": "10cbf584b4a33c01db34c0af9dfdbd40756426427ed76da7117ca04fa62c5c59",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 62
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1968,
+          "content_sha256": "fab2d5494c4a715affdfab059b7d9e3db54e27126a7dd0091e80e873229653b7",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 357,
+          "content_sha256": "5eebe3ff8ba6fbea465a7296975905c1a4a42497e2307904a91192f0e7895f51",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2092,
+          "content_sha256": "c032a697ac93ec2aa1b8cf2c8fae13555601d634bff24caad93ff2b0a0c62d94",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 39
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1589,
+          "content_sha256": "10c66e5b269259162c05ccde93b58dfb2f875b5a5f8181e2e8d4e17b861bacb9",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 14
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 2.1
+    },
+    {
+      "question": "How did Tesla's Q2 2026 deliveries compare with BYD's battery-electric vehicle sales in the same quarter?",
+      "answer": "The information regarding BYD's battery-electric vehicle sales in Q2 2026 is not available in the provided documents.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "How did Tesla's Q2 2026 deliveries compare with BYD's battery-electric vehicle sales in the same quarter?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1813,
+          "content_sha256": "4455abf2acfb01c74fadae251d1429f708442c56ba8c3acc112124d82c202612",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 25
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 302,
+          "content_sha256": "926e26cb8c0d3ba394a74a20059cab70b12fad674193e8dc5d69823570a52286",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 38
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2029,
+          "content_sha256": "3a2a8a3adea63c0938718a30fe8ddc0b54a00216ae6f025298238bcd5eb4d06f",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 6
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1968,
+          "content_sha256": "fab2d5494c4a715affdfab059b7d9e3db54e27126a7dd0091e80e873229653b7",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1883,
+          "content_sha256": "1d5aa8de5e2b9f292a9972bc655d0843e0d1bbb6821a869888aaaf4200e01fce",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 5
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 103,
+          "content_sha256": "2044f6fe1f7ba8ca4f287f05b0e24ab0b8b6e7c17045942f7c49e723d9b5e01c",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 8
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 2.7
+    },
+    {
+      "question": "Tesla deployed 13.5 GWh of storage in Q2 2026. What is the latest news on Megapack 3 and Megablock production?",
+      "answer": "Tesla is on track to begin production of Megapack 3 and Megablock this year at their new Megafactory Texas [TSLA-Q2-2026-Update.pdf, p. 6].",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Tesla deployed 13.5 GWh of storage in Q2 2026. What is the latest news on Megapack 3 and Megablock production?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 2025,
+          "content_sha256": "ae3ff85bed429d295db91074031039cf8711a395debd952fc6fa335448442205",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 37
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2029,
+          "content_sha256": "3a2a8a3adea63c0938718a30fe8ddc0b54a00216ae6f025298238bcd5eb4d06f",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 6
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 302,
+          "content_sha256": "926e26cb8c0d3ba394a74a20059cab70b12fad674193e8dc5d69823570a52286",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 38
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 261,
+          "content_sha256": "2176e294f8a95afdce3c4bb8377e518cac0c9ed2441b7b3ed3abe04bab5bdf96",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 8
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 735,
+          "content_sha256": "a5558a61d46ff87ac2552605d7f0b036c75e203a1bf0e5af61754aa8f7b3a1e4",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2076,
+          "content_sha256": "4ad176fd9978c80428b7ecf8dbf93d60f68fcc5a5ab238d2e07d6e855c43e4b5",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 57
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 2.1
+    },
+    {
+      "question": "What is the latest analyst consensus for Tesla's Q3 2026 vehicle deliveries?",
+      "answer": "The information is not available in the provided documents.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What is the latest analyst consensus for Tesla's Q3 2026 vehicle deliveries?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1883,
+          "content_sha256": "1d5aa8de5e2b9f292a9972bc655d0843e0d1bbb6821a869888aaaf4200e01fce",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 5
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 105,
+          "content_sha256": "b0a49d6c80f4a57ade684be2fc09d58b6a803ec52b58508be1ed8e289daf7f65",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 34
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2027,
+          "content_sha256": "81ebb7c6531fdebea3c5222227ffde41526f849de5dca93a3f883b4404a2dd53",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 357,
+          "content_sha256": "5eebe3ff8ba6fbea465a7296975905c1a4a42497e2307904a91192f0e7895f51",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1651,
+          "content_sha256": "f11144b51e8af3d04afaaf083b5dd3bcfdf1199365205f0e63f0c7d52190c9e8",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 10
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2004,
+          "content_sha256": "3fb437eacd9bb7eb5b39a0b50fec2c60c3d26d97978005adbc85c8c29c2c5fd1",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 38
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 1.7
+    },
+    {
+      "question": "What were the most significant Tesla news stories in September 2026?",
+      "answer": "The information is not available in the provided documents.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What were the most significant Tesla news stories in September 2026?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 2056,
+          "content_sha256": "e704118819594f00014f0a3d1402db634dd7af706538ae81734f690f10155397",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 30
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2095,
+          "content_sha256": "cf242da77e1fba18fe3995bb0d743c8ca64608674c6d2cf79d468c631eff7b55",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 7
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 302,
+          "content_sha256": "926e26cb8c0d3ba394a74a20059cab70b12fad674193e8dc5d69823570a52286",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 38
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2082,
+          "content_sha256": "ff422c52e4ea1aa96fae03b9e20180e9ee5e65f8ea4c0830c57fa84b9a75ce64",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 21
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 534,
+          "content_sha256": "00be3095565c5bd0d0074e536696d3d8a8e42460af25160a3ca2d3fd8d0c28e2",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 32
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1968,
+          "content_sha256": "fab2d5494c4a715affdfab059b7d9e3db54e27126a7dd0091e80e873229653b7",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 1.6
+    },
+    {
+      "question": "What is Tesla's current market capitalisation?",
+      "answer": "The information is not available in the provided documents.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What is Tesla's current market capitalisation?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1982,
+          "content_sha256": "6672d16c612c2225b31b94c3dd48f82ee69776b6e529efdd6249738ad1c499ec",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 80
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1812,
+          "content_sha256": "938f9626e4c6d6b350fb391984121bd552e4e7f00d6c9a441108d0e1d5c49643",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 26
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1884,
+          "content_sha256": "c2908d2603e9fbc5454e25455ebec25be82b8fb6f2506dc2083e66f319f32067",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 45
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 555,
+          "content_sha256": "22cdc9da329e2dd952b993005e58a8e2280f5c3ab1a4aa4467c543d7edcf1810",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 27
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1299,
+          "content_sha256": "e8335d10640ba01972baaae783128bf0e5b8794c03bfff5d203bfb2f8893ee32",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 20
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1430,
+          "content_sha256": "5b11b2b756ae29fdc9b57967a004091214ab1cd31c98652f5fca76fa3c365a12",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 51
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 2.4
+    },
+    {
+      "question": "What gross margin did Tesla earn on the Cybertruck alone in Q2 2026?",
+      "answer": "The information is not available in the provided documents.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What gross margin did Tesla earn on the Cybertruck alone in Q2 2026?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1251,
+          "content_sha256": "538ac77bb877589bc577a9f69f249b644d1091289f6f00878eb4c8264dc34e6f",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 64
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 357,
+          "content_sha256": "5eebe3ff8ba6fbea465a7296975905c1a4a42497e2307904a91192f0e7895f51",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2082,
+          "content_sha256": "ff422c52e4ea1aa96fae03b9e20180e9ee5e65f8ea4c0830c57fa84b9a75ce64",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 21
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2047,
+          "content_sha256": "10b2db63001625af254a698716253a037d825e7d4e7b741330d3a92cb831fa12",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 30
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1321,
+          "content_sha256": "54f3b10cd003f8befcfed8f6a3edf17f3a2df037f8434773ecf9e40f1597f2df",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 39
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2054,
+          "content_sha256": "deb11a63c60f0cb11580453d30f04a9a1e794abc358adfc613e394f1cc1fa7bd",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 54
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 1.5
+    },
+    {
+      "question": "What is Tesla's internal research and development budget for the year 2030?",
+      "answer": "The information is not available in the provided documents.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "What is Tesla's internal research and development budget for the year 2030?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 652,
+          "content_sha256": "8e16b3b3239dbd8909c777a2879bbf1446ede7705060c4124d062abfe4f16695",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 66
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 607,
+          "content_sha256": "f99a783a62cf41d90ce3897ca87099a5b797a8e9f5fa091cb922c83ef1a5416e",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 37
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 394,
+          "content_sha256": "3f2906caa6b735942c6272687914a6355ace628bdcd59d84dd7bfd0987c35dc8",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 102
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 2065,
+          "content_sha256": "b5481351338f3b7df6842933578e10d21754c11ed54cecb561a289ac4d65b97c",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 21
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 819,
+          "content_sha256": "43c502c0ce3b5b055bf124e4e344c8c1ba8cb67482efe169c97da19cb2dfa583",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 54
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1996,
+          "content_sha256": "6f367cf80d1619aad33f242052d77cfed82691169e4d099d590aee267a2aacd0",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 1.5
+    },
+    {
+      "question": "How much revenue did Tesla's Berlin factory generate in Q2 2026?",
+      "answer": "The information is not available in the provided documents.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "How much revenue did Tesla's Berlin factory generate in Q2 2026?"
+          }
+        }
+      ],
+      "contexts": [
+        {
+          "characters": 1813,
+          "content_sha256": "4455abf2acfb01c74fadae251d1429f708442c56ba8c3acc112124d82c202612",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 25
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 948,
+          "content_sha256": "4eac97484855a1dd975027d23c95e295c795a1a7753a7f694d1dc578a8523f03",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 6
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 948,
+          "content_sha256": "0ca66ce5d5fdad55b773431319ba253f3939158ff54ba4094eda68ff5bd94bbc",
+          "document_labels": [
+            {
+              "file": "tsla-20251231.pdf",
+              "page": 145
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1967,
+          "content_sha256": "d64e7d022c5f7edd2e34d629eda252b77aa4a1ef3000c8ec73cc729fcbfc9faa",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 37
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 357,
+          "content_sha256": "5eebe3ff8ba6fbea465a7296975905c1a4a42497e2307904a91192f0e7895f51",
+          "document_labels": [
+            {
+              "file": "TSLA-Q2-2026-Update.pdf",
+              "page": 9
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        },
+        {
+          "characters": 1081,
+          "content_sha256": "a58eac71b024740eb205b9f8cf4276e8dd046ba3a917cd1095f7f68d606dd922",
+          "document_labels": [
+            {
+              "file": "tsla-20260630.pdf",
+              "page": 35
+            }
+          ],
+          "web_source_urls": [],
+          "raw_text_included": false
+        }
+      ],
+      "latency_s": 1.5
+    }
+  ],
+  "public_edition": {
+    "raw_contexts_omitted": true,
+    "role": "trace summaries, not a resumable checkpoint"
+  }
+}

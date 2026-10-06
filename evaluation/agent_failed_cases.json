@@ -1,0 +1,503 @@
+[
+  {
+    "system": "agent",
+    "id": "gold_02",
+    "category": "pdf_factual",
+    "question": "What was Tesla's total GAAP gross margin in Q2 2026?",
+    "answer": "Tesla's total GAAP gross margin for the three months ended June 30, 2026, was 16.8% [tsla-20260630.pdf, p.39].",
+    "tools_called": [
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "total GAAP gross margin Q2 2026"
+        }
+      }
+    ],
+    "latency_s": 3.3,
+    "error": null,
+    "runtime_status": "completed",
+    "figure_ok": true,
+    "cites_file": false,
+    "cites_url": false,
+    "refused": null,
+    "tools_ok": true,
+    "evidence_ok": false,
+    "num_tool_calls": 1,
+    "passed": false,
+    "judge_verdict": "correct",
+    "judge_reasoning": "The answer correctly states Tesla's total GAAP gross margin as 16.8% for Q2 2026, which matches the reference. The reference also provides a comparison to the previous year, stating a decrease of 41 basis points from 17.2% in Q2 2025, but this additional detail is not required for the answer to be correct. The main figure and period are accurately reported in the answer.",
+    "judge_score": 1.0,
+    "judge_scored": true,
+    "judge_status": "scored",
+    "judge_error_type": null,
+    "diagnosis": "Retrieval miss",
+    "failure_status": "Answer/check failure",
+    "content_diagnosis": "Retrieval miss"
+  },
+  {
+    "system": "agent",
+    "id": "gold_03",
+    "category": "pdf_factual",
+    "question": "How many vehicles did Tesla deliver in Q2 2026?",
+    "answer": "In Q2 2026, Tesla delivered a total of **480,126 vehicles**. This figure represents a 25% increase compared to the same quarter in the previous year [tsla-20260630.pdf, p.34].",
+    "tools_called": [
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "vehicles delivered Three Months Ended June 30, 2026"
+        }
+      },
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "vehicles delivered Q2-2026"
+        }
+      },
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "Tesla vehicle deliveries Q2 2026"
+        }
+      }
+    ],
+    "latency_s": 7.9,
+    "error": null,
+    "runtime_status": "completed",
+    "figure_ok": true,
+    "cites_file": false,
+    "cites_url": false,
+    "refused": null,
+    "tools_ok": true,
+    "evidence_ok": true,
+    "num_tool_calls": 3,
+    "passed": false,
+    "judge_verdict": "partially_correct",
+    "judge_reasoning": "The answer correctly states the total number of vehicles Tesla delivered in Q2 2026 as 480,126, which matches the reference. It also accurately mentions the 25% year-over-year increase, which is consistent with the reference. However, the answer does not break down the deliveries into Model 3/Y and other models as the reference does. Despite this omission, the main figure and conclusion are correct.",
+    "judge_score": 0.5,
+    "judge_scored": true,
+    "judge_status": "scored",
+    "judge_error_type": null,
+    "diagnosis": "Synthesis error",
+    "failure_status": "Answer/check failure",
+    "content_diagnosis": "Synthesis error"
+  },
+  {
+    "system": "agent",
+    "id": "gold_04",
+    "category": "pdf_factual",
+    "question": "What was Tesla's free cash flow in Q2 2026?",
+    "answer": "Tesla's free cash flow for Q2 2026 was $5,762 million (or $5.76 billion) [TSLA-Q2-2026-Update.pdf, p.31].",
+    "tools_called": [
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "free cash flow Q2 2026"
+        }
+      }
+    ],
+    "latency_s": 3.4,
+    "error": null,
+    "runtime_status": "completed",
+    "figure_ok": false,
+    "cites_file": true,
+    "cites_url": false,
+    "refused": null,
+    "tools_ok": true,
+    "evidence_ok": false,
+    "num_tool_calls": 1,
+    "passed": false,
+    "judge_verdict": "incorrect",
+    "judge_reasoning": "The answer states that Tesla's free cash flow for Q2 2026 was $5,762 million, which contradicts the reference stating it was negative $1,092 million. The reference provides a breakdown of operating cash flow and capital expenditures leading to the negative free cash flow, while the answer provides a positive figure without such a breakdown. This discrepancy indicates that the main figure is incorrect.",
+    "judge_score": 0.0,
+    "judge_scored": true,
+    "judge_status": "scored",
+    "judge_error_type": null,
+    "diagnosis": "Retrieval miss",
+    "failure_status": "Answer/check failure",
+    "content_diagnosis": "Retrieval miss"
+  },
+  {
+    "system": "agent",
+    "id": "gold_05",
+    "category": "pdf_factual",
+    "question": "How much energy storage did Tesla deploy in Q2 2026?",
+    "answer": "In Q2 2026, Tesla deployed **22.3 GWh** of energy storage products [tsla-20260630.pdf, p.35].",
+    "tools_called": [
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "energy storage deployed Q2 2026"
+        }
+      },
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "energy storage deployments Q2 2026"
+        }
+      },
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "Tesla energy storage deployments Q2 2026"
+        }
+      }
+    ],
+    "latency_s": 7.1,
+    "error": null,
+    "runtime_status": "completed",
+    "figure_ok": false,
+    "cites_file": false,
+    "cites_url": false,
+    "refused": null,
+    "tools_ok": true,
+    "evidence_ok": false,
+    "num_tool_calls": 3,
+    "passed": false,
+    "judge_verdict": "incorrect",
+    "judge_reasoning": "The reference states that Tesla deployed 13.5 GWh of energy storage in Q2 2026, while the answer claims 22.3 GWh for the same period. The figure in the answer does not match the reference in terms of value, even though the company and period are correct. This discrepancy makes the answer incorrect as it contradicts the reference figure.",
+    "judge_score": 0.0,
+    "judge_scored": true,
+    "judge_status": "scored",
+    "judge_error_type": null,
+    "diagnosis": "Retrieval miss",
+    "failure_status": "Answer/check failure",
+    "content_diagnosis": "Retrieval miss"
+  },
+  {
+    "system": "agent",
+    "id": "gold_07",
+    "category": "pdf_factual",
+    "question": "What was the gross profit of Tesla's energy generation and storage segment in fiscal year 2025?",
+    "answer": "In fiscal year 2025, Tesla's energy generation and storage segment achieved a gross margin of 29.8%. However, the specific gross profit figure for this segment is not directly disclosed in the available documents. The gross margin indicates the percentage of revenue that exceeds the cost of goods sold, but without the total revenue for the energy generation and storage segment, the exact gross profit cannot be calculated.\n\nFor context, the cost of energy generation and storage revenue increased by $1.52 billion, or 20%, in 2025 compared to 2024, which was primarily driven by increases in Megapack and Powerwall deployments [tsla-20251231.pdf, p.66].",
+    "tools_called": [
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "Tesla gross profit energy generation and storage Year Ended December 31, 2025"
+        }
+      }
+    ],
+    "latency_s": 4.4,
+    "error": null,
+    "runtime_status": "completed",
+    "figure_ok": false,
+    "cites_file": true,
+    "cites_url": false,
+    "refused": null,
+    "tools_ok": true,
+    "evidence_ok": false,
+    "num_tool_calls": 1,
+    "passed": false,
+    "judge_verdict": "incorrect",
+    "judge_reasoning": "The answer does not provide the specific gross profit figure for Tesla's energy generation and storage segment in fiscal year 2025, which is $3,802 million according to the reference. Instead, it discusses the gross margin and cost increases without giving the required figure. Therefore, the main figure is missing, making the answer incorrect.",
+    "judge_score": 0.0,
+    "judge_scored": true,
+    "judge_status": "scored",
+    "judge_error_type": null,
+    "diagnosis": "Retrieval miss",
+    "failure_status": "Answer/check failure",
+    "content_diagnosis": "Retrieval miss"
+  },
+  {
+    "system": "agent",
+    "id": "gold_08",
+    "category": "pdf_factual",
+    "question": "How much revenue did Tesla earn from automotive regulatory credits in Q2 2026?",
+    "answer": "In Q2 2026, Tesla earned $145 million from automotive regulatory credits. This represents a significant decrease of $293 million, or 67%, compared to the same quarter in the previous year, Q2 2025, when the revenue from regulatory credits was $438 million [tsla-20260630.pdf, p. 38].",
+    "tools_called": [
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "automotive regulatory credits Q2 2026"
+        }
+      },
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "regulatory credit revenue Q2 2026"
+        }
+      }
+    ],
+    "latency_s": 5.7,
+    "error": null,
+    "runtime_status": "completed",
+    "figure_ok": false,
+    "cites_file": true,
+    "cites_url": false,
+    "refused": null,
+    "tools_ok": true,
+    "evidence_ok": false,
+    "num_tool_calls": 2,
+    "passed": false,
+    "judge_verdict": "partially_correct",
+    "judge_reasoning": "The answer states that Tesla earned $145 million from automotive regulatory credits in Q2 2026, while the reference states $146 million. The difference of $1 million is within acceptable rounding limits. However, the answer also mentions a decrease of $293 million from $438 million in Q2 2025, whereas the reference states a decrease from $439 million. The discrepancy in the previous year's figure is not within acceptable rounding limits, as it affects the calculation of the decrease. Therefore, the main figure for Q2 2026 is correct, but the comparison with Q2 2025 is incorrect.",
+    "judge_score": 0.5,
+    "judge_scored": true,
+    "judge_status": "scored",
+    "judge_error_type": null,
+    "diagnosis": "Retrieval miss",
+    "failure_status": "Answer/check failure",
+    "content_diagnosis": "Retrieval miss"
+  },
+  {
+    "system": "agent",
+    "id": "gold_09",
+    "category": "pdf_factual",
+    "question": "What is the installed annual Model 3/Model Y production capacity at Tesla's Shanghai factory?",
+    "answer": "The installed annual production capacity at Tesla's Shanghai factory for the Model 3 and Model Y is reported to be more than 950,000 vehicles, with some sources indicating it is about one million vehicles [source: https://www.reuters.com/business/autos-transportation/teslas-china-operations-ev-makers-global-production-powerhouse-2026-07-31; source: https://eletric-vehicles.com/tesla/tesla-gigashanghai-exports-surpass-2025-total-in-just-seven-months].",
+    "tools_called": [
+      {
+        "name": "tavily_web_search_tool",
+        "args": {
+          "query": "Tesla Shanghai factory Model 3 Model Y production capacity 2026",
+          "num_results": 5
+        }
+      }
+    ],
+    "latency_s": 5.1,
+    "error": null,
+    "runtime_status": "completed",
+    "figure_ok": true,
+    "cites_file": false,
+    "cites_url": true,
+    "refused": null,
+    "tools_ok": false,
+    "evidence_ok": true,
+    "num_tool_calls": 1,
+    "passed": false,
+    "judge_verdict": "correct",
+    "judge_reasoning": "The ANSWER correctly states that the installed annual production capacity at Tesla's Shanghai factory for the Model 3 and Model Y is more than 950,000 vehicles, which matches the REFERENCE. However, the ANSWER adds additional information by mentioning that some sources indicate it is about one million vehicles. This additional information does not contradict the REFERENCE but is not required by it. The main figure and conclusion required by the REFERENCE are present and correct in the ANSWER.",
+    "judge_score": 1.0,
+    "judge_scored": true,
+    "judge_status": "scored",
+    "judge_error_type": null,
+    "diagnosis": "Missing tool",
+    "failure_status": "Answer/check failure",
+    "content_diagnosis": "Missing tool"
+  },
+  {
+    "system": "agent",
+    "id": "gold_13",
+    "category": "conflict",
+    "question": "What is Tesla's total cash, cash equivalents and investments position?",
+    "answer": "As of June 30, 2026, Tesla's total cash, cash equivalents, and short-term investments amounted to **$43.52 billion**. This figure represents a decrease of $535 million from the end of 2025 [tsla-20260630.pdf, p. 35].",
+    "tools_called": [
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "total cash, cash equivalents and investments position Tesla Three Months Ended June 30, 2026"
+        }
+      }
+    ],
+    "latency_s": 4.2,
+    "error": null,
+    "runtime_status": "completed",
+    "figure_ok": false,
+    "cites_file": true,
+    "cites_url": false,
+    "refused": null,
+    "tools_ok": true,
+    "evidence_ok": false,
+    "num_tool_calls": 1,
+    "passed": false,
+    "judge_verdict": "correct",
+    "judge_reasoning": "The answer provides the most recent figure for Tesla's total cash, cash equivalents, and investments as $43.52 billion at the end of Q2 2026, which matches the reference's $43,524 million for the same date. The answer also notes the decrease from the end of 2025, aligning with the reference's earlier figure of $44,059 million. The rounding of $43,524 million to $43.52 billion is acceptable. All required information is present and correct.",
+    "judge_score": 1.0,
+    "judge_scored": true,
+    "judge_status": "scored",
+    "judge_error_type": null,
+    "diagnosis": "Retrieval miss",
+    "failure_status": "Answer/check failure",
+    "content_diagnosis": "Retrieval miss"
+  },
+  {
+    "system": "agent",
+    "id": "gold_14",
+    "category": "conflict",
+    "question": "Is Tesla's revenue growing or declining?",
+    "answer": "Tesla's revenue is currently growing. For the three months ended June 30, 2026, Tesla reported total revenues of $28.24 billion, which represents an increase of $5.74 billion compared to $22.50 billion for the same period in the previous year (Q2 2025) [tsla-20260630.pdf, p. 14]. \n\nFor the six months ended June 30, 2026, total revenues were $50.62 billion, up from $41.83 billion during the same period in 2025, marking an increase of $8.79 billion [tsla-20260630.pdf, p. 14].\n\nThis trend indicates that Tesla's revenue is on an upward trajectory, reflecting growth in both the most recent quarter and the first half of the year compared to the same periods in the prior year.",
+    "tools_called": [
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "Tesla revenue Q2 2026"
+        }
+      },
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "Tesla revenue Year Ended December 31, 2025"
+        }
+      }
+    ],
+    "latency_s": 5.7,
+    "error": null,
+    "runtime_status": "completed",
+    "figure_ok": false,
+    "cites_file": true,
+    "cites_url": false,
+    "refused": null,
+    "tools_ok": true,
+    "evidence_ok": false,
+    "num_tool_calls": 2,
+    "passed": false,
+    "judge_verdict": "partially_correct",
+    "judge_reasoning": "The answer provides detailed information about Tesla's revenue growth for Q2 2026, stating that revenues were $28.24 billion, which aligns with the reference's Q2 2026 revenue of $28,236 million. The answer also mentions the year-over-year growth, which is consistent with the reference's statement of a 26% increase. However, the answer does not address the fiscal year 2025 revenue decline from 2024, which is a required part of the reference. Therefore, while the answer correctly addresses the Q2 2026 growth, it is missing the information about the fiscal year 2025 decline.",
+    "judge_score": 0.5,
+    "judge_scored": true,
+    "judge_status": "scored",
+    "judge_error_type": null,
+    "diagnosis": "Retrieval miss",
+    "failure_status": "Answer/check failure",
+    "content_diagnosis": "Retrieval miss"
+  },
+  {
+    "system": "agent",
+    "id": "gold_15",
+    "category": "conflict",
+    "question": "What was Tesla's free cash flow in its most recent reported quarter?",
+    "answer": "Tesla's free cash flow for the quarter ended June 30, 2026, was $1.0 billion [tsla-20260630.pdf, p. 24].",
+    "tools_called": [
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "free cash flow Three Months Ended June 30, 2026"
+        }
+      }
+    ],
+    "latency_s": 3.6,
+    "error": null,
+    "runtime_status": "completed",
+    "figure_ok": false,
+    "cites_file": false,
+    "cites_url": false,
+    "refused": null,
+    "tools_ok": true,
+    "evidence_ok": false,
+    "num_tool_calls": 1,
+    "passed": false,
+    "judge_verdict": "incorrect",
+    "judge_reasoning": "The answer provides a free cash flow figure of $1.0 billion for the quarter ended June 30, 2026, which corresponds to Q2 2026. However, the reference states that the free cash flow for Q2 2026 was negative $1,092 million. The answer not only provides an incorrect figure but also contradicts the reference by stating a positive cash flow instead of a negative one. Therefore, the main figure is incorrect, and the answer does not match the reference.",
+    "judge_score": 0.0,
+    "judge_scored": true,
+    "judge_status": "scored",
+    "judge_error_type": null,
+    "diagnosis": "Retrieval miss",
+    "failure_status": "Answer/check failure",
+    "content_diagnosis": "Retrieval miss"
+  },
+  {
+    "system": "agent",
+    "id": "gold_18",
+    "category": "hybrid",
+    "question": "Tesla deployed 13.5 GWh of storage in Q2 2026. What is the latest news on Megapack 3 and Megablock production?",
+    "answer": "As of October 2026, Tesla is preparing to ramp up production of its Megapack 3 and Megablock systems at a new factory in Brookshire, Texas. Here are the key updates:\n\n1. **Megapack 3 Production**:\n   - Production of the Megapack 3 is set to begin in late 2026 at the new factory, which has an ambitious target of 50 GWh annual capacity, equating to approximately 10,000 Megapack 3 units per year [source: https://finance.yahoo.com/news/tesla-unveils-megapack-3-megablock-battery-storage-systems-as-car-business-lags-154257699.html].\n   - The factory is designed to significantly enhance Tesla's energy storage capabilities, marking a substantial expansion in their energy division [source: https://www.basenor.com/blogs/news/teslas-texas-megapack-factory-megapack-3-production-starts-2026].\n\n2. **Megablock Production**:\n   - Alongside the Megapack 3, the Megablock system is also set to be produced at the same facility. The Megablock installations are designed to connect multiple units, providing extensive storage solutions suitable for various scales, from small municipalities to larger cities [source: https://finance.yahoo.com/news/tesla-unveils-megapack-3-megablock-battery-storage-systems-as-car-business-lags-154257699.html].\n   - The Megablock system is reported to be 23% faster to install and can operate in extreme temperatures ranging from -40°C to 60°C [source: https://optimusk.blog/blog/tesla-energy-supply-chain].\n\nOverall, Tesla's new factory and the introduction of the Megapack 3 and Megablock systems represent a significant step forward in their energy storage strategy, aiming to meet growing demand in the utility-scale battery market.",
+    "tools_called": [
+      {
+        "name": "tavily_web_search_tool",
+        "args": {
+          "query": "Tesla Megapack 3 news October 2026",
+          "num_results": 5
+        }
+      },
+      {
+        "name": "tavily_web_search_tool",
+        "args": {
+          "query": "Tesla Megablock production news October 2026",
+          "num_results": 5
+        }
+      }
+    ],
+    "latency_s": 11.4,
+    "error": null,
+    "runtime_status": "completed",
+    "figure_ok": false,
+    "cites_file": false,
+    "cites_url": true,
+    "refused": null,
+    "tools_ok": false,
+    "evidence_ok": false,
+    "num_tool_calls": 2,
+    "passed": false,
+    "judge_verdict": "partially_correct",
+    "judge_reasoning": "The ANSWER confirms the deployment of 13.5 GWh of storage in Q2 2026, which matches the REFERENCE. It also provides information about the production of Megapack 3 and Megablock at a new factory in Brookshire, Texas, which aligns with the REFERENCE's mention of production at Megafactory Texas in 2026. The ANSWER includes additional details about the production capacity and features of the Megapack 3 and Megablock systems, supported by web sources. However, the ANSWER does not explicitly mention the Q2 2026 Update or provide a URL for the web sources, which is required by the REFERENCE. Despite this, the ANSWER does include the latest news from the web, fulfilling the requirement for a web part. Therefore, the ANSWER is partially correct because it lacks the explicit mention of the Q2 2026 Update and URLs for the web sources.",
+    "judge_score": 0.5,
+    "judge_scored": true,
+    "judge_status": "scored",
+    "judge_error_type": null,
+    "diagnosis": "Missing tool",
+    "failure_status": "Answer/check failure",
+    "content_diagnosis": "Missing tool"
+  },
+  {
+    "system": "agent",
+    "id": "gold_23",
+    "category": "unanswerable",
+    "question": "What is Tesla's internal research and development budget for the year 2030?",
+    "answer": "The search did not yield specific information regarding Tesla's internal research and development budget for the year 2030. As of now, there are no disclosed figures or projections available for that specific year. If you have any other questions or need information on a different topic, feel free to ask!",
+    "tools_called": [
+      {
+        "name": "tavily_web_search_tool",
+        "args": {
+          "query": "Tesla internal research and development budget 2030",
+          "num_results": 5
+        }
+      }
+    ],
+    "latency_s": 4.6,
+    "error": null,
+    "runtime_status": "completed",
+    "figure_ok": null,
+    "cites_file": null,
+    "cites_url": false,
+    "refused": false,
+    "tools_ok": false,
+    "evidence_ok": null,
+    "num_tool_calls": 1,
+    "passed": false,
+    "judge_verdict": "correct",
+    "judge_reasoning": "The answer correctly states that there is no specific information available regarding Tesla's R&D budget for 2030, aligning with the reference which indicates that Tesla has not disclosed this information. The answer does not invent any figures, which is consistent with the requirement for this category.",
+    "judge_score": 1.0,
+    "judge_scored": true,
+    "judge_status": "scored",
+    "judge_error_type": null,
+    "diagnosis": "Missing tool",
+    "failure_status": "Answer/check failure",
+    "content_diagnosis": "Missing tool"
+  },
+  {
+    "system": "agent",
+    "id": "gold_24",
+    "category": "unanswerable",
+    "question": "How much revenue did Tesla's Berlin factory generate in Q2 2026?",
+    "answer": "The revenue generated by Tesla's Berlin factory in Q2 2026 is not explicitly detailed in the available documents. Tesla's total revenues for the three months ended June 30, 2026, were reported as $28,236 million, but there is no specific breakdown provided for the Berlin factory's contribution to this total [tsla-20260630.pdf, p. 38]. \n\nIf you need more specific information about the Berlin factory's performance, it may not be disclosed in the current filings.",
+    "tools_called": [
+      {
+        "name": "pdf_search_tool",
+        "args": {
+          "query": "Berlin factory revenue Q2 2026"
+        }
+      }
+    ],
+    "latency_s": 3.7,
+    "error": null,
+    "runtime_status": "completed",
+    "figure_ok": null,
+    "cites_file": null,
+    "cites_url": false,
+    "refused": false,
+    "tools_ok": true,
+    "evidence_ok": null,
+    "num_tool_calls": 1,
+    "passed": false,
+    "judge_verdict": "correct",
+    "judge_reasoning": "The answer correctly states that the revenue generated by Tesla's Berlin factory in Q2 2026 is not explicitly detailed, aligning with the reference that Tesla does not report revenue by factory. It also avoids inventing a number for the Berlin factory's revenue, which is consistent with the reference's requirement. Additionally, the answer provides Tesla's total revenue for the period, which is accurate and does not contradict the reference. However, it does not mention the geographic revenue context, which is optional according to the reference.",
+    "judge_score": 1.0,
+    "judge_scored": true,
+    "judge_status": "scored",
+    "judge_error_type": null,
+    "diagnosis": "Synthesis error",
+    "failure_status": "Answer/check failure",
+    "content_diagnosis": "Synthesis error"
+  }
+]

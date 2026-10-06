@@ -1,0 +1,11 @@
+,agent,naive_rag
+passed,0.46,0.42
+judge_score,0.75,0.56
+figure_ok,0.56,0.44
+cites_file,0.67,0.72
+cites_url,0.29,0.0
+refused,0.33,1.0
+tools_ok,0.88,0.75
+evidence_ok,0.5,0.61
+num_tool_calls,1.54,1.0
+latency_s,5.72,1.96

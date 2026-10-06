@@ -1,0 +1,49 @@
+# Private credentials and configuration
+.env
+.env.*
+!.env.example
+config.json
+config.*.json
+!config.example.json
+*private-config*
+*api-key*
+*.pem
+*.key
+
+# Environment and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+vector_cache*
+*.cache
+
+# Course inputs and fresh-run payloads are private
+data/*
+!data/README.md
+*.pdf
+*.zip
+golden_dataset.csv
+runs/
+/evaluation_trajectories.json
+/evaluation_results.*
+/evaluation_scorecard.csv
+/evaluation_by_category.csv
+/evaluation_completed_scorecard.csv
+/evaluation_denominators.csv
+/golden_source_audit.*
+/document_source_inventory.json
+/judge_*.csv
+/judge_*.json
+/failure_analysis_log.txt
+/Tesla_market_report_*.md
+/Tesla_market_report_*_trajectory.json
+/research-agent.png
+
+# Editor/OS local files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,247 @@
+{
+  "cache_chunk_count": 1275,
+  "bad_normalized_page_content_count": 0,
+  "bad_content_samples": [],
+  "pdf_contexts": [
+    {
+      "context": 1,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 30,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 2,
+      "file": "rivn-20260630.pdf",
+      "page": 58,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 3,
+      "file": "tsla-20260630.pdf",
+      "page": 35,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 4,
+      "file": "tsla-20260630.pdf",
+      "page": 34,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 5,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 9,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 6,
+      "file": "tsla-20260630.pdf",
+      "page": 39,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 7,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 30,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 8,
+      "file": "rivn-20260630.pdf",
+      "page": 59,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 9,
+      "file": "tsla-20251231.pdf",
+      "page": 64,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 10,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 31,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 11,
+      "file": "tsla-20260630.pdf",
+      "page": 16,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 12,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 9,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 13,
+      "file": "tsla-20260630.pdf",
+      "page": 16,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 14,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 31,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 15,
+      "file": "rivn-20260630.pdf",
+      "page": 8,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 16,
+      "file": "tsla-20251231.pdf",
+      "page": 85,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 17,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 27,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 18,
+      "file": "tsla-20260630.pdf",
+      "page": 17,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 19,
+      "file": "tsla-20260630.pdf",
+      "page": 35,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 20,
+      "file": "rivn-20260630.pdf",
+      "page": 66,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 21,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 1,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 22,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 31,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 23,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 24,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 24,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 29,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 25,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 23,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 26,
+      "file": "rivn-20260630.pdf",
+      "page": 49,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 27,
+      "file": "rivn-20260630.pdf",
+      "page": 56,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 28,
+      "file": "rivn-20260630.pdf",
+      "page": 53,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 29,
+      "file": "rivn-20260630.pdf",
+      "page": 23,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 30,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 9,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 31,
+      "file": "tsla-20260630.pdf",
+      "page": 37,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 32,
+      "file": "GlobalEVOutlook2026.pdf",
+      "page": 128,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 33,
+      "file": "GlobalEVOutlook2026.pdf",
+      "page": 97,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 34,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 1,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 35,
+      "file": "tsla-20260630.pdf",
+      "page": 16,
+      "exact_matching_cache_chunks": 1
+    },
+    {
+      "context": 36,
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 6,
+      "exact_matching_cache_chunks": 1
+    }
+  ],
+  "pdf_context_exact_cache_match_count": 36,
+  "report_update_cited_pages": [
+    1,
+    9,
+    23,
+    30,
+    31,
+    37
+  ],
+  "report_update_invalid_pages": [
+    37
+  ],
+  "relevant_correct_page_chunks": [
+    {
+      "file_name": "TSLA-Q2-2026-Update.pdf",
+      "page": 3,
+      "page_number": 4
+    },
+    {
+      "file_name": "TSLA-Q2-2026-Update.pdf",
+      "page": 4,
+      "page_number": 5
+    }
+  ]
+}

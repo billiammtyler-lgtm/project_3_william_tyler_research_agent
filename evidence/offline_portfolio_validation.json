@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "api_calls": 0,
+  "notebooks": 2,
+  "code_cells_each": 47,
+  "identical_implementation": true,
+  "notebook_outputs_cleared": true,
+  "answer_records": 48,
+  "scored_judge_verdicts": 48,
+  "rubric_passes": {
+    "agent": 11,
+    "naive_rag": 10
+  },
+  "agreement_count": 40,
+  "scanned_text_files": 43,
+  "credential_private_path_hits": [],
+  "limits": [
+    "Validates stored outcomes and public packaging; does not rerun models or authenticate source PDFs."
+  ]
+}

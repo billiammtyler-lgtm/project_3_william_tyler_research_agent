@@ -1,0 +1,279 @@
+{
+  "audit_date": "2026-10-05",
+  "disposition": "original_generated_report_fails_substantive_grounding",
+  "original_preserved": true,
+  "original_report_sha256": "4597ff46539d9b059cce9c02c30d4d4e5850c89527e36d05cc7949fb61e78442",
+  "original_trajectory_sha256": "b2cf0a0fe6854f5e3e09754eb13848925ebfec2e17bd2e370a0fd02d82038aef",
+  "reviewed_report_sha256": "865ef3e2e88075770382c1912e3114357b008160dab7558ce4d1f85bf377144e",
+  "reviewed_report_kind": "separate_analyst_reviewed_correction_not_agent_rerun",
+  "evaluation_answers_modified": false,
+  "report_agent_error": null,
+  "report_tool_calls": 11,
+  "report_contexts": 41,
+  "repeat_searches": [
+    {
+      "call": {
+        "args": {
+          "query": "Rivian Q2 2026 deliveries"
+        },
+        "name": "tavily_web_search_tool"
+      },
+      "count": 2
+    },
+    {
+      "call": {
+        "args": {
+          "query": "Ford Q2 2026 sales"
+        },
+        "name": "tavily_web_search_tool"
+      },
+      "count": 2
+    }
+  ],
+  "required_financial_source_pages_retrieved": {
+    "Update_p4": false,
+    "Update_p5": false
+  },
+  "financial_comparisons": [
+    {
+      "metric": "total_revenues",
+      "reported_current": "$28,236 million",
+      "reported_prior": "$22,496 million",
+      "verified_current": "$28,236 million",
+      "verified_prior": "$22,496 million",
+      "correct_value_and_period": true,
+      "source": "TSLA-Q2-2026-Update.pdf",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "metric": "total_GAAP_gross_margin",
+      "reported_current": "16.8%",
+      "reported_prior": "17.2%",
+      "verified_current": "16.8%",
+      "verified_prior": "17.2%",
+      "correct_value_and_period": true,
+      "source": "TSLA-Q2-2026-Update.pdf",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "metric": "GAAP_net_income_attributable_to_common_stockholders",
+      "reported_current": "$1,114 million",
+      "reported_prior": "$1,172 million",
+      "verified_current": "$1,114 million",
+      "verified_prior": "$1,172 million",
+      "correct_value_and_period": true,
+      "source": "TSLA-Q2-2026-Update.pdf",
+      "pages": [
+        4,
+        27
+      ]
+    },
+    {
+      "metric": "free_cash_flow",
+      "reported_current": "$5,762 million",
+      "reported_prior": "$6,780 million",
+      "verified_current": "$(1,092) million",
+      "verified_prior": "$146 million",
+      "correct_value_and_period": false,
+      "source": "TSLA-Q2-2026-Update.pdf",
+      "pages": [
+        4,
+        31
+      ],
+      "diagnosis": "TTM relabeled quarterly; prior value is Q1 2025 TTM"
+    },
+    {
+      "metric": "vehicle_deliveries",
+      "reported_current": "480,126",
+      "reported_prior": "466,140",
+      "verified_current": "480,126",
+      "verified_prior": "384,122",
+      "correct_value_and_period": false,
+      "source": "TSLA-Q2-2026-Update.pdf",
+      "pages": [
+        5
+      ],
+      "diagnosis": "prior figure unsupported"
+    },
+    {
+      "metric": "energy_storage_deployed",
+      "reported_current": "22.3 GWh",
+      "reported_prior": "18.5 GWh",
+      "verified_current": "13.5 GWh",
+      "verified_prior": "9.6 GWh",
+      "correct_value_and_period": false,
+      "source": "TSLA-Q2-2026-Update.pdf",
+      "pages": [
+        5
+      ],
+      "diagnosis": "H1 2026 relabeled Q2 and unsupported prior figure"
+    }
+  ],
+  "fully_correct_financial_comparisons": 3,
+  "invalid_page_citations": [
+    {
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 37,
+      "reason": "greater than 33 physical pages"
+    },
+    {
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 37,
+      "reason": "greater than 33 physical pages"
+    },
+    {
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 37,
+      "reason": "greater than 33 physical pages"
+    },
+    {
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 37,
+      "reason": "greater than 33 physical pages"
+    },
+    {
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 37,
+      "reason": "greater than 33 physical pages"
+    },
+    {
+      "file": "TSLA-Q2-2026-Update.pdf",
+      "page": 37,
+      "reason": "greater than 33 physical pages"
+    }
+  ],
+  "findings": [
+    {
+      "id": "R01",
+      "severity": "critical",
+      "issue": "free cash flow TTM/quarter and sign error",
+      "fix": "Use $(1,092)m vs $146m from Update p4"
+    },
+    {
+      "id": "R02",
+      "severity": "critical",
+      "issue": "H1 storage relabeled quarterly and unsupported comparator",
+      "fix": "Use13.5 vs9.6GWh from Update p5"
+    },
+    {
+      "id": "R03",
+      "severity": "high",
+      "issue": "wrong prior delivery figure",
+      "fix": "Use384122 from Update p5"
+    },
+    {
+      "id": "R04",
+      "severity": "critical",
+      "issue": "out-of-range and unsupported PDF citations",
+      "fix": "Check filename/page bounds and source support; cite each metric"
+    },
+    {
+      "id": "R05",
+      "severity": "critical",
+      "issue": "recent developments unsupported or outside 90 days",
+      "fix": "Replace with separately verified primary events"
+    },
+    {
+      "id": "R06",
+      "severity": "high",
+      "issue": "Ford all-powertrain and geographic mismatch",
+      "fix": "Use pureEV9746 U.S. and disclose narrower geography"
+    },
+    {
+      "id": "R07",
+      "severity": "medium",
+      "issue": "duplicate web searches and PDF queries omit company/formal period",
+      "fix": "Use specified source/period queries and deduplicate searches"
+    },
+    {
+      "id": "R08",
+      "severity": "medium",
+      "issue": "uncited executive/SWOT claims and incomplete source list",
+      "fix": "Use cited facts and clearly labeled assessments"
+    }
+  ],
+  "primary_web_sources": [
+    {
+      "company": "BYD",
+      "month": "April",
+      "period": "April 2026",
+      "passenger_BEV_sales": 156944,
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0503/2026050300135.pdf",
+      "physical_page": 1,
+      "local_file": "reviewed_sources/BYD-April-2026-sales.pdf",
+      "sha256": "b1f22c7852068176d796e67bfd8cdec2a35bd3bc5f6559c17ad86dfdb849d769"
+    },
+    {
+      "company": "BYD",
+      "month": "May",
+      "period": "May 2026",
+      "passenger_BEV_sales": 198674,
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0601/2026060103055.pdf",
+      "physical_page": 1,
+      "local_file": "reviewed_sources/BYD-May-2026-sales.pdf",
+      "sha256": "9b185d55865350d0ed0e4012ba93bb3caf6b4d66fffc9658bcd0fcd71fde87c3"
+    },
+    {
+      "company": "BYD",
+      "month": "June",
+      "period": "June 2026",
+      "passenger_BEV_sales": 201472,
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0701/2026070100033.pdf",
+      "physical_page": 1,
+      "local_file": "reviewed_sources/BYD-June-2026-sales.pdf",
+      "sha256": "4f2a7cd939b66e6d58e2f68a7ab1ef4ac21fc50fc2957a23cd116d0f96e8a0d1"
+    },
+    {
+      "company": "Ford",
+      "period": "Q2 2026",
+      "geography": "U.S.",
+      "pure_EV_sales": 9746,
+      "Q2_2025_pure_EV_sales": 16438,
+      "reported_yoy_percent": -40.7,
+      "all_powertrain_sales": 549200,
+      "url": "https://s205.q4cdn.com/882619693/files/doc_news/2026/Jul/02/Ford-U-S-Q2-2026-Sales-Release.pdf",
+      "physical_page": 6,
+      "verification": "downloaded official PDF; rendered image table visually inspected",
+      "local_file": "reviewed_sources/Ford-US-Q2-2026-Sales-Release.pdf",
+      "sha256": "98c8330dcffc35794a45459b45c8e62b992b0538bd03ed2977017a7899909b45"
+    }
+  ],
+  "derived_BYD_Q2_passenger_BEV_sales": 557090,
+  "derived_BYD_minus_Tesla_Q2_deliveries": 76964,
+  "recent_window_start": "2026-07-07",
+  "recent_window_end": "2026-10-05",
+  "reviewed_recent_developments": [
+    {
+      "event_date": "2026-07-22",
+      "claim": "Tesla published Q2 2026 financial results",
+      "url": "https://ir.tesla.com/press-release/tesla-releases-second-quarter-2026-financial-results",
+      "publisher": "Tesla Investor Relations",
+      "within_90_day_window": true
+    },
+    {
+      "event_date": "2026-09-03",
+      "claim": "Tesla describes Cybercab launch and more than 40 vehicles serving limited Austin areas",
+      "url": "https://www.tesla.com/en_hk/event/meet-cybercab-pp-enhk?redirect=no",
+      "publisher": "Tesla",
+      "qualification": "company assertion about limited rollout; no independent safety or profitability validation",
+      "within_90_day_window": true
+    },
+    {
+      "event_date": "2026-10-02",
+      "claim": "Tesla Q3 2026 operating report: 486532 deliveries and 13.7GWh; financial release scheduled October21",
+      "url": "https://ir.tesla.com/press-release/tesla-third-quarter-2026-production-deliveries-and-deployments",
+      "publisher": "Tesla Investor Relations",
+      "within_90_day_window": true
+    }
+  ],
+  "original_URL_access_limits": [
+    "Several secondary URLs inaccessible or rate limited; this is not evidence that a URL never existed.",
+    "Rivian official newsroom returned a JavaScript-only shell; Q2 delivery figures confirmed from supplied primary PDF."
+  ],
+  "local_primary_verification": "complete supplied PDF pages, without feeding golden references into generation",
+  "supplemental_retrieval_diagnosis": "retrieval_diagnosis.md / retrieval_diagnosis.json when available"
+}

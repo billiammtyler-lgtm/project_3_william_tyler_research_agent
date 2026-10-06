@@ -1,0 +1,50 @@
+[
+  {
+    "file": "TSLA-Q2-2026-Update.pdf",
+    "status": "read",
+    "pages": 33,
+    "sha256": "cf19adfbc01d3959fa9f1b4fe97429c7947c4a687680a337ac6ff20ac8b77bd7",
+    "document_title": "",
+    "first_page_excerpt_summary": {
+      "characters": 16,
+      "content_sha256": "d6a93d9e33f5dfeed744c938fc20e3c5bfc1de55e7687942a2a6e756259a6e93",
+      "raw_text_included": false
+    }
+  },
+  {
+    "file": "rivn-20260630.pdf",
+    "status": "read",
+    "pages": 148,
+    "sha256": "1cf4a0fc447d2a681d9d9b404fb8a6a3b99f1e4839cee0ec4ac0474d1294cacb",
+    "document_title": "rivn-20260630",
+    "first_page_excerpt_summary": {
+      "characters": 1600,
+      "content_sha256": "d054da8c6de2760069f969456f5e9c22e7c7aa46055c19db02aa3c6c8b1a5e7e",
+      "raw_text_included": false
+    }
+  },
+  {
+    "file": "tsla-20251231.pdf",
+    "status": "read",
+    "pages": 159,
+    "sha256": "4133840596327cd7f7182f95a0c133d831cff9a0d1078d07fa40ce912cce5e56",
+    "document_title": "tsla-20251231",
+    "first_page_excerpt_summary": {
+      "characters": 1600,
+      "content_sha256": "dbc43c9ff73e8d53f3f4173492e8cf7d89902bb2fdcc094647d911bfa296f4bc",
+      "raw_text_included": false
+    }
+  },
+  {
+    "file": "tsla-20260630.pdf",
+    "status": "read",
+    "pages": 47,
+    "sha256": "b7dd7c058bb76946d99503d6c411bf526d4c7239d8460a31f328b42c12a1ca4a",
+    "document_title": "tsla-20260630",
+    "first_page_excerpt_summary": {
+      "characters": 1600,
+      "content_sha256": "0a042ba749cb05c831554fc3bb9b0f268c4bf91a66300dcca28266ce8985b200",
+      "raw_text_included": false
+    }
+  }
+]

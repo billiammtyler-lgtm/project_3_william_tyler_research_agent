@@ -1,0 +1,33 @@
+{
+  "canonical_notebook": "William_Matthew_Tyler_Project_III_Low.ipynb",
+  "companion_notebook": "William_Matthew_Tyler_Project_III_High.ipynb",
+  "canonical_execution_status": "complete",
+  "companion_independent_live_execution": false,
+  "code_source_sha256": "a3abaf690d0833d67aca4686e5e2d8e87c4af5139e9609e435418fbb79c5bc4f",
+  "mirrored_at": "2026-10-05T19:44:21.510392-04:00",
+  "scope": "All identical code cells share genuine canonical outputs and execution counts. Markdown is authored separately.",
+  "canonical_completion_evidence": {
+    "execution_status": "complete",
+    "required_live_cells": [
+      50,
+      59,
+      89,
+      97,
+      102,
+      111,
+      119,
+      134,
+      136,
+      139,
+      143,
+      146,
+      150
+    ],
+    "missing_execution_counts": [],
+    "error_output_cells": [],
+    "executed_code_cells": 47,
+    "total_code_cells": 47,
+    "output_blocks": 39
+  },
+  "canonical_execution_log_sha256": "21294ff993db8ae0be45a81ae569dd58d2278162c27c21998c6553d704da1cfa"
+}

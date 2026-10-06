@@ -1,0 +1,8 @@
+,judge_score,passed
+system,naive_rag,naive_rag
+category,,
+conflict,0.5,0.0
+hybrid,0.5,0.0
+pdf_factual,0.62,0.58
+unanswerable,1.0,1.0
+web_current,0.0,0.0

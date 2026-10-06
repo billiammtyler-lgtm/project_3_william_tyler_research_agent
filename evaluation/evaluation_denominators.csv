@@ -1,0 +1,11 @@
+,agent,naive_rag
+passed,24,24
+judge_score,24,24
+figure_ok,18,18
+cites_file,18,18
+cites_url,24,24
+refused,3,3
+tools_ok,24,24
+evidence_ok,18,18
+num_tool_calls,24,24
+latency_s,24,24

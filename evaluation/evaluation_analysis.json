@@ -1,0 +1,665 @@
+{
+  "benchmark": "checkpoint-completed canonical live run",
+  "metrics": {
+    "agent": {
+      "questions": 24,
+      "passed": 11,
+      "pass_rate": 0.4583333333333333,
+      "judge_score": 0.75,
+      "judge_verdict_counts": {
+        "correct": 16,
+        "partially_correct": 4,
+        "incorrect": 4
+      },
+      "tool_calls_total": 37,
+      "tool_calls_mean": 1.5416666666666667,
+      "latency_total_s": 137.3,
+      "latency_mean_s": 5.720833333333334,
+      "latency_median_s": 5.7,
+      "runtime_errors": 0,
+      "judge_errors": 0,
+      "evidence_numeric_rate": 0.5,
+      "by_category": {
+        "conflict": {
+          "questions": 3,
+          "passed": 0,
+          "pass_rate": 0.0,
+          "judge_score": 0.5
+        },
+        "hybrid": {
+          "questions": 3,
+          "passed": 2,
+          "pass_rate": 0.6666666666666666,
+          "judge_score": 0.8333333333333334
+        },
+        "pdf_factual": {
+          "questions": 12,
+          "passed": 5,
+          "pass_rate": 0.4166666666666667,
+          "judge_score": 0.6666666666666666
+        },
+        "unanswerable": {
+          "questions": 3,
+          "passed": 1,
+          "pass_rate": 0.3333333333333333,
+          "judge_score": 1.0
+        },
+        "web_current": {
+          "questions": 3,
+          "passed": 3,
+          "pass_rate": 1.0,
+          "judge_score": 1.0
+        }
+      }
+    },
+    "naive_rag": {
+      "questions": 24,
+      "passed": 10,
+      "pass_rate": 0.4166666666666667,
+      "judge_score": 0.5625,
+      "judge_verdict_counts": {
+        "correct": 11,
+        "incorrect": 8,
+        "partially_correct": 5
+      },
+      "tool_calls_total": 24,
+      "tool_calls_mean": 1.0,
+      "latency_total_s": 47.10000000000001,
+      "latency_mean_s": 1.9625000000000004,
+      "latency_median_s": 1.95,
+      "runtime_errors": 0,
+      "judge_errors": 0,
+      "evidence_numeric_rate": 0.6111111111111112,
+      "by_category": {
+        "conflict": {
+          "questions": 3,
+          "passed": 0,
+          "pass_rate": 0.0,
+          "judge_score": 0.5
+        },
+        "hybrid": {
+          "questions": 3,
+          "passed": 0,
+          "pass_rate": 0.0,
+          "judge_score": 0.5
+        },
+        "pdf_factual": {
+          "questions": 12,
+          "passed": 7,
+          "pass_rate": 0.5833333333333334,
+          "judge_score": 0.625
+        },
+        "unanswerable": {
+          "questions": 3,
+          "passed": 3,
+          "pass_rate": 1.0,
+          "judge_score": 1.0
+        },
+        "web_current": {
+          "questions": 3,
+          "passed": 0,
+          "pass_rate": 0.0,
+          "judge_score": 0.0
+        }
+      }
+    }
+  },
+  "judge_agreement": {
+    "rubric_all_row_agreement": 0.8333333333333334,
+    "total_rows": 48,
+    "scored_only_agreement": 0.8333333333333334,
+    "scored_rows": 48,
+    "judge_error_rows": 0
+  },
+  "failure_cases": [
+    {
+      "id": "gold_04",
+      "question": "What was Tesla's free cash flow in Q2 2026?",
+      "answer": "Tesla's free cash flow for Q2 2026 was $5,762 million (or $5.76 billion) [TSLA-Q2-2026-Update.pdf, p.31].",
+      "deterministic_passed": false,
+      "judge_verdict": "incorrect",
+      "judge_reasoning": "The answer states that Tesla's free cash flow for Q2 2026 was $5,762 million, which contradicts the reference stating it was negative $1,092 million. The reference provides a breakdown of operating cash flow and capital expenditures leading to the negative free cash flow, while the answer provides a positive figure without such a breakdown. This discrepancy indicates that the main figure is incorrect.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "free cash flow Q2 2026"
+          }
+        }
+      ],
+      "evidence_ok": false,
+      "root_cause": "Retrieval omitted the quarterly FCF row; synthesis then presented the 5,762 trailing-twelve-month figure as Q2 FCF.",
+      "targeted_fix": "Target the Financial Summary and quarterly cash-flow reconciliation, retain TTM/quarter headers in chunks, and reject a TTM row for a quarterly request.",
+      "evidence_excerpts": [
+        {
+          "source_label": "[Source: TSLA-Q2-2026-Update.pdf; page: 31]",
+          "matched": "5,762",
+          "excerpt_summary": {
+            "characters": 415,
+            "content_sha256": "4821bfc15c624b6479687447bf194029c39c5e2ed6719a98c09d8fbb2a5acf3a",
+            "raw_text_included": false
+          }
+        },
+        {
+          "source_label": "[Source: TSLA-Q2-2026-Update.pdf; page: 31]",
+          "matched": "Free cash flow",
+          "excerpt_summary": {
+            "characters": 424,
+            "content_sha256": "14a4b22d6bfd02068f1e3666dc282cb6d7b4cdb4bed6eb38fc56601d83f6c334",
+            "raw_text_included": false
+          }
+        },
+        {
+          "source_label": "[Source: TSLA-Q2-2026-Update.pdf; page: 31]",
+          "matched": "TTM",
+          "excerpt_summary": {
+            "characters": 413,
+            "content_sha256": "befa57572ecdded2832f01e18c12a3a25928a049b5157f973d0daa3ef209662e",
+            "raw_text_included": false
+          }
+        },
+        {
+          "source_label": "[Source: TSLA-Q2-2026-Update.pdf; page: 24]",
+          "matched": "Free cash flow",
+          "excerpt_summary": {
+            "characters": 413,
+            "content_sha256": "068a0c97e77707c992c76e69a833d244a3595e4e4020608d3014f8b03e313ac4",
+            "raw_text_included": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "gold_05",
+      "question": "How much energy storage did Tesla deploy in Q2 2026?",
+      "answer": "In Q2 2026, Tesla deployed **22.3 GWh** of energy storage products [tsla-20260630.pdf, p.35].",
+      "deterministic_passed": false,
+      "judge_verdict": "incorrect",
+      "judge_reasoning": "The reference states that Tesla deployed 13.5 GWh of energy storage in Q2 2026, while the answer claims 22.3 GWh for the same period. The figure in the answer does not match the reference in terms of value, even though the company and period are correct. This discrepancy makes the answer incorrect as it contradicts the reference figure.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "energy storage deployed Q2 2026"
+          }
+        },
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "energy storage deployments Q2 2026"
+          }
+        },
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Tesla energy storage deployments Q2 2026"
+          }
+        }
+      ],
+      "evidence_ok": false,
+      "root_cause": "Three searches did not retrieve 13.5 GWh; the answer relabeled 22.3 GWh through the second quarter (H1) as Q2 alone.",
+      "targeted_fix": "Search the Update deck's Operational Summary storage-deployed row; retain its quarter-column headers and validate three-month versus cumulative periods.",
+      "evidence_excerpts": [
+        {
+          "source_label": "[Source: tsla-20260630.pdf; page: 35]",
+          "matched": "22.3",
+          "excerpt_summary": {
+            "characters": 414,
+            "content_sha256": "c82c52a96ee12d80030a4b7bbd041d6328e66da1387fafa8852ef7436c926222",
+            "raw_text_included": false
+          }
+        },
+        {
+          "source_label": "[Source: tsla-20260630.pdf; page: 35]",
+          "matched": "through the second quarter",
+          "excerpt_summary": {
+            "characters": 436,
+            "content_sha256": "540cdf0bb55dff3a95e802a80f43e91969e7a7ba9aebd7ddabcb88fdc5842304",
+            "raw_text_included": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "gold_07",
+      "question": "What was the gross profit of Tesla's energy generation and storage segment in fiscal year 2025?",
+      "answer": "In fiscal year 2025, Tesla's energy generation and storage segment achieved a gross margin of 29.8%. However, the specific gross profit figure for this segment is not directly disclosed in the available documents. The gross margin indicates the percentage of revenue that exceeds the cost of goods sold, but without the total revenue for the energy generation and storage segment, the exact gross profit cannot be calculated.\n\nFor context, the cost of energy generation and storage revenue increased by $1.52 billion, or 20%, in 2025 compared to 2024, which was primarily driven by increases in Megapack and Powerwall deployments [tsla-20251231.pdf, p.66].",
+      "deterministic_passed": false,
+      "judge_verdict": "incorrect",
+      "judge_reasoning": "The answer does not provide the specific gross profit figure for Tesla's energy generation and storage segment in fiscal year 2025, which is $3,802 million according to the reference. Instead, it discusses the gross margin and cost increases without giving the required figure. Therefore, the main figure is missing, making the answer incorrect.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "Tesla gross profit energy generation and storage Year Ended December 31, 2025"
+          }
+        }
+      ],
+      "evidence_ok": false,
+      "root_cause": "One search retrieved gross-margin discussion without the 3,802 gross-profit table; the agent falsely concluded that the figure was undisclosed.",
+      "targeted_fix": "Before refusing, search the FY2025 segment-information/gross-profit table using a second distinct query; preserve numeric table rows and headers.",
+      "evidence_excerpts": [
+        {
+          "source_label": "[Source: tsla-20251231.pdf; page: 66]",
+          "matched": "29.8",
+          "excerpt_summary": {
+            "characters": 411,
+            "content_sha256": "7502a6b4e561db96336b78ba6adf45b505fe991ae6a10802147effbce905d6e4",
+            "raw_text_included": false
+          }
+        },
+        {
+          "source_label": "[Source: tsla-20251231.pdf; page: 66]",
+          "matched": "Gross margin for energy generation",
+          "excerpt_summary": {
+            "characters": 444,
+            "content_sha256": "7de4d1bd7998c3ac2f512e82242ea63dfcadcb1b92695f06eeefbb8545b31b05",
+            "raw_text_included": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "gold_02",
+      "question": "What was Tesla's total GAAP gross margin in Q2 2026?",
+      "answer": "Tesla's total GAAP gross margin for the three months ended June 30, 2026, was 16.8% [tsla-20260630.pdf, p.39].",
+      "deterministic_passed": false,
+      "judge_verdict": "correct",
+      "judge_reasoning": "The answer correctly states Tesla's total GAAP gross margin as 16.8% for Q2 2026, which matches the reference. The reference also provides a comparison to the previous year, stating a decrease of 41 basis points from 17.2% in Q2 2025, but this additional detail is not required for the answer to be correct. The main figure and period are accurately reported in the answer.",
+      "tools_called": [
+        {
+          "name": "pdf_search_tool",
+          "args": {
+            "query": "total GAAP gross margin Q2 2026"
+          }
+        }
+      ],
+      "evidence_ok": false,
+      "root_cause": "The figure is correct and supported on the cited 10-Q page; the strict evaluator expects only the Update filename and searches 16.8% while extraction contains 16.8 %.",
+      "targeted_fix": "Retain the rubric result, but add complementary normalized evidence and verified-file/page checks that accept another valid supplied source.",
+      "evidence_excerpts": [
+        {
+          "source_label": "[Source: tsla-20260630.pdf; page: 39]",
+          "matched": "16.8",
+          "excerpt_summary": {
+            "characters": 414,
+            "content_sha256": "9ab873638069999af95ae186d91aab0936636b8f2038d65e0a9e409ae9246438",
+            "raw_text_included": false
+          }
+        },
+        {
+          "source_label": "[Source: tsla-20260630.pdf; page: 39]",
+          "matched": "Total gross margin",
+          "excerpt_summary": {
+            "characters": 428,
+            "content_sha256": "a4e6a20a4cb3fbbbdff8a40e8dc7dceaa71452c5904cb5fd66819075b88d8033",
+            "raw_text_included": false
+          }
+        }
+      ],
+      "independent_source_check": {
+        "file": "tsla-20260630.pdf",
+        "page": 39,
+        "excerpt_summary": {
+          "characters": 130,
+          "content_sha256": "94dce5c238613f317fdfc5ceba0c4e4aea7cbcd5b2640fcef86e72ec9db9f08b",
+          "raw_text_included": false
+        },
+        "assessment": "Judge is right about the requested figure; deterministic file/spacing checks are too narrow."
+      }
+    }
+  ],
+  "judge_limitations": [
+    {
+      "id": "gold_18",
+      "verdict": "partially_correct",
+      "finding": "Judge reasoning says the answer confirms 13.5 GWh and lacks URLs; the actual answer omits 13.5 and includes multiple full URLs. The partial verdict may still be defensible, but its stated reasoning is unreliable.",
+      "answer_contains_13_5": false,
+      "answer_contains_http": true
+    },
+    {
+      "id": "gold_20",
+      "verdict": "correct",
+      "finding": "The judge accepts the September-news answer although several cited articles are dated October 2–3. September event dates are not established item by item, so freshness compliance needs manual review.",
+      "answer": "In September 2026, several significant news stories emerged regarding Tesla:\n\n1. **Quarterly Deliveries**: Tesla reported a 2% year-over-year decline in deliveries for the third quarter of 2026, totaling 486,532 vehicles. This figure was slightly better than analysts' expectations, which had predicted a larger decline of 7%. The previous year's deliveries for the same quarter were 497,099 vehicles [source: https://electrek.co/2026/10/02/tesla-q3-2026-deliveries-486532].\n\n2. **Launch of the Cybercab**: Tesla's new autonomous taxi service, the \"Cybercab,\" launched in Austin, Texas, faced challenges in its first month. Surveys indicated that 50% of U.S. respondents were uncomfortable with the idea of riding in a robotaxi that lacks a steering wheel or pedals. This launch is part of Tesla's broader strategy to expand its autonomous vehicle offerings [source: https://www.cnbc.com/2026/10/03/tesla-cybercab-pressure-to-expand-after-rocky-first-month-in-austin.html].\n\n3. **Sales Performance**: Despite the overall decline in deliveries, Tesla's Model 3 saw a significant increase in sales, which helped offset a drop in Model Y sales. This performance was noted as being strong even without the typical end-of-quarter surge [source: https://thedriven.io/2026/10/02/tesla-sales-come-off-the-boil-due-to-shipment-dates-but-model-3-leaps-ahead-before-release-of-cut-price-model].\n\n4. **Financial Outlook**: Tesla's capital expenditures for 2026 are expected to exceed $25 billion as the company invests in expanding its Robotaxi fleet, production capabilities, and other infrastructure. However, the company reported a negative free cash flow of $1.1 billion in the second quarter of 2026, raising concerns about its financial health [source: https://finance.yahoo.com/markets/stocks/articles/tesla-stock-buy-september-2026-105400122.html].\n\nThese stories highlight Tesla's ongoing challenges and strategic initiatives as it navigates a competitive electric vehicle market."
+    }
+  ],
+  "retry_provenance": {
+    "started_utc": "2026-10-05T23:38:30.815169+00:00",
+    "initial_snapshot": "[LOCAL_OUTPUT]/William_Matthew_Tyler_Project_III_Low/initial_evaluation_snapshot",
+    "initial_runtime_error_roles": 1,
+    "unchanged_generation_roles": 47,
+    "generation_retries": [
+      {
+        "system": "agent",
+        "id": "gold_10",
+        "initial_latency_s": 0.4,
+        "retry_latency_s": 5.7,
+        "initial_status": "runtime_error",
+        "retry_status": "completed",
+        "initial_error": "Error code: 401 - {'error': {'message': \"You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.\", 'type': 'invalid_request_error', 'param': None, 'code': None}}",
+        "initial_answer_sha256": "5e54ac4784debde0174f2314c95904a06c94135706649ec380694b1373d5c228",
+        "retry_answer_sha256": "126aba23beb227a6e92850fe406cf8ee15673887220ca4d08d8f7d13d8859d16"
+      }
+    ],
+    "retry_wall_time_s": 6.064,
+    "run_fingerprint": "cc1e8256e803ac84b89ac4b7b7c640d740a4b28a4a0e2d870aa236624d0696f0",
+    "source_hashes": {
+      "13": "3774727b8fb8c458846fe8186b283ec9dbc5de7f5367665f4269492f265c5ea7",
+      "15": "f713be8c79c4f517ce86fe3b4652fdd114cfbb9521757957f80ddb71e02860a6",
+      "24": "ebe94df657bea5d9cca0d1482081d45f00c2d95d30b041357ec35a94af2a6a64",
+      "26": "6e017edcde677ceaf9e2b42b103ff3a1d5fb35eaf72364c07be02df646151899",
+      "29": "e36ed59cd60c21eddddc8724c09425f4084f726abed7be5c2cf2186ed97f7539",
+      "30": "5532eaa2a03de88a3bbe8cecf1c9d4526fdb687df8f0706f2fec0739785d8258",
+      "33": "7aaced925fb28ed95a9d095bf8f855cb202a777de018b444385a1da9983d6120",
+      "39": "5369e076313242ff6015db8bde37c8c1e6df01f2893d4333704245d6c090e6a7",
+      "41": "cb8d81133206dba272df4b8f580b74482851c4d6419e539e62aacb29fb244011",
+      "45": "f36a278fa1c7f609b72c098693cad1f62c47f5a247f61e9e8a9b0ae98486d74a",
+      "47": "19916dc44a40605ebba08ae51aec0f748ae5fcda152e51d8d88f575ea88d9ef9",
+      "49": "ac7c17647265232615d913a0f6506cb7ebc0e4b5cdf8858479836aa197406dde",
+      "50": "53ec41f2fd41a854b759e6c5e67dd8526d11bedea80099bee73202402a68f204",
+      "52": "feaec5b70c29e8e4a371dad79537f31f953ab6d593794a478d9a919ed3c996f4",
+      "54": "5ed486fcdfede37874d9f648649f3b00cfac001804b5ec0ca0f09032ecbbccbe",
+      "57": "8c54e4e9f78ca2d7615c098edd0d61190664aa5c56bd2a0956be0fc360dd77a0",
+      "59": "b398b59ccb724d70f33b87cf5ccf5ea224df0cb1017730ba221def4e04bec160",
+      "62": "9883456795b37a0ef921d4bb193c9e31d2e8dc9a04a3ed17d71686bd846ab633",
+      "64": "541bee30f9af6c6b01ee19a66c01b81e3a11f3796b1da6c098e361ee2bf258f1",
+      "65": "dd4d6ee05d023d9757f9a2cf9c58534d76f6a0094f7f85596612517724f7d9e4",
+      "71": "5ae6bc4289a2528b7becb6bab221a06b51dd9015874a6e1e5d7d26de69deca25",
+      "77": "311764ac0b2f12edf616b59cbb94cc823c991e7b620612e8d5950bb22fbc4283",
+      "81": "2d0a82b2551c0c7bf36fdfc81fca9a24668d505b9151f6cc101134d324e8b52c",
+      "82": "d468211c079bce0e38526f49cae3a80091d1ef37497b1af18cffa7d9b0253240",
+      "87": "ecccdde1d5d31abde8e05e98910a33ae6b68bc1b41397eac665cd9464f482ce4",
+      "89": "1196ebb86ebbab82403d714ab9a53cd8170f6eb108e434c0539a4c0e56775cfd",
+      "93": "5c0c73fc0cdf582fe2cc586950f9a50b914770158e575f07fd24f01adc2436cf",
+      "94": "d8c389c3f904b0855043d538e78c3b0c88c2e9ad970fdbecb430b9f4a263c794",
+      "97": "98ff321d59e983ab1fecdef0a53bb26914f52799658e9857ac46b23eaab2041d",
+      "102": "f62fd0ba318b5dc74e6408b1a05876e304451da78b506c51203570513ef171c9",
+      "106": "06d9446342b30479568c0ce37cd374669b23651a86dfca8e5a717757524c8d2c",
+      "111": "430e54b14e6f80a26b57bcac26df397fd7d3ab8dd3bd4dca5da3ecc36773e723",
+      "114": "b0da8518704ac886e7849264f836a29f84b86a758f56b2601ae198a6a2bfd22a",
+      "115": "9134fddea01cf812684d981bcdddb8fd6e80329a897be50848089affa6e1a909",
+      "116": "bbcfdda42a17162242af6c285d1a117c33dff96ce758048563ac0c5b2b73c1e2",
+      "119": "32ec4aa2895bc87bede159c23bece9a323f18e91a68892b55fb9836d758d59ad",
+      "122": "2776c7adfc1b144a2695c208047b683282e5060d3802cc6603b4a2216d871893",
+      "124": "0f8ee7c12873bd39caa6ece46c57ce73ca007973ba66c3098a57deb1964f4c5e",
+      "127": "310b8b99cf3fec16e397e838a2878c5de8f0543493588831ad736bd6348f4cc9",
+      "129": "27de56b160d0b6a8731c01ba1681607717c56227abd254f2633a8685be2aabf2",
+      "132": "c0baaf1704d0c5b79ef9dd7cb3584c05501b21be809d312b4ea4293ed44c1728",
+      "134": "ca9cf07c8e75b4d68d64c916c71127dc827f3fb1e4414b01ff858c716fa12cd6",
+      "136": "c817f4b1322291415f826791fc25e16f0ad760121961a902e39981bd3e62b3dd",
+      "139": "480ed99b1029295ee50625a90229de98edcb962b67d3ea4aa89fead4b594602d",
+      "143": "5025df3dc03ce718877bbd115bb5dbd15010487623f013d0ef6720ad74e05968",
+      "146": "1f83361fb6e5a1274dd6c00e30f64c9f9d3a91589d2515e6bd8cae1572640232",
+      "150": "cb672d1177d64faca9cebf7af9b120de73eff56d9d4d7db86536aa851ef34011"
+    },
+    "judge_model": "gpt-4o",
+    "judge_prompt_source_sha256": "c0baaf1704d0c5b79ef9dd7cb3584c05501b21be809d312b4ea4293ed44c1728",
+    "judge_cached_initial_verdicts": 47,
+    "judge_fresh_retry_calls": 1,
+    "judge_prompt_provenance": [
+      {
+        "prompt_sha256": "94e547560a104275b017f766d1f8cbfa45e5749221bd319bd6688a15ac9d9c30",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "fb1db872e53b2b8592d425cd7437070dcad4539bdec56ba9ecaa1e1a5c257054",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "51dc26ccd980ef2656af3ff337d1f08067c29d01b140146808172156740afce0",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "bcce67c8b5200010080b456534951ab9194d3ad8c18cf11d852fc2f7b36b9ba6",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "e5c37801597de275879bc5c6a509bae8b1e7cb063d77b73b303fe028804c47cb",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "a43de537374b710f26738832e75d89a8eba62e14f6b1afc2c6bfeb5af2d8ce07",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "25131421a02021c3c1e18f109c683adc54d1f13c2859efa516fd75c5606a7f4a",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "dd6c1fe9276a7fbe47653919bf969a4633e1f9d26a2c4c5b79641d9b7fe4ec68",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "3857c01eb17db6936773db55daf08fd2eaa72887c70fc36dfed9a4ccd7015797",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "e1f6916b576d6c60603bfc405f7c3c76784e998cd2bd0042f405d89ac39aa5b3",
+        "provenance": "fresh_retry_judge",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "879f1d071be897e9c39758488ec3bcd7ce3664f5431201dd2fd480a8eecfae6c",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "b74b219cc7551a7338faf13c063e6f729e3ab14adca7a6f03556398de1655e90",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "29c4b3ae3034ca3ce411e03aa12e1365bc023d10133e8bf8217b7eb8977a7bc1",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "434e48cfa3da6671611a439b55d164f64a042d28617c7e45876cc334a69d4160",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "99d8166f547d713595fc8a6eb963771b61184da15612d99e024888fcf7247c1d",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "f7f478d88e55683fa37ade7b3391f0435a56b3ae7e55fd1440de0ae8c9c6a21b",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "6d645b4c2d4140a92424225e2f57173055d0f96e42ae75fcfc039a51c20e65c7",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "94a7243b0082b2f5ef1c8abed1f8118e2abfd704fbb9c0a8fc4e3829d78a8c09",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "266b2b0cf3a9639924b2cddc07f6f0728bef2157412423b5ee78b21f20fd620e",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "3071a8800b46ae765bc26ba5a69c77ea2e93f4602eb22caf6349fd95eb5160fb",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "a4b0dae94da771f37bcea515f41f1bb79911c2dea00e8560273ff1ec5e629ba2",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "2c9434fbea6ce4676d654b8c7e3c602053e05bca8935d429757a6eefa8b9feb2",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "632bafc370e263d87074f54f710dc158b79303a9ff0bcc85c5276ee22a022b29",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "7299f95c5b972afed8a4b98954489771eb82a4c407fd34d19dd51c7c109190ad",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "4b9d35bcda297a94a97bd67a9fa25204e74cb4b82bcf73b48dfd73d571b36884",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "331af1364da700434f8c2712a9af810f90820cabc6f25e89c898d301676d138c",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "3126ff971b72745b6506da7e3f3323435bc21381be10c1976d6a735d11620866",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "1a8de5f0cf7a8f08e9c09384f2352b182341eb8ce75e58d503dda095a0c6a839",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "45349974e4192bd7e661d8b8a8786ae9beaa8e77eefbde4e8d21834852601c9b",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "9c77d24509bfd57c495c3a0ea547e5d904d9808ea9e71b2a648a7770b8de959e",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "c6a23d71f5d4088cdf65b8ae9f6f2285da8a053cb64d021832471f5efcf609d5",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "fe0841f23a6f2d26cdf69a3de40b171004172fe66a5adaaf2a8310afd41ea5ce",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "0648dfbe4861531e2a37b8f95dd4ee7c6f3c907547f0f6943ce2bc52f97e6490",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "cd2e126bfe8e5cae0bc157e918ee495d1e21787b56341be27a4af6c3c9bcacc7",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "1540874396c33d9c851a7a248ec28df6080269da903c8f160b229c2013fc7c69",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "feeaf4a6cf240960aa3612727504b1885b8cffe8a39ad1d634d1609f0744bff7",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "ab13e4f0e774c78a2315627b22d246867905a400938349492e43dcb41ea0c20e",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "e9896c304968cb6a58dd9cf30f92e0efa344035d3eaf783b82f610f9b4178ab0",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "0fbb4d89f1c7756a388f28a94cd88c224c73a8c7902ae62010817b723fe0d085",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "6b0eefcd196cf9f828404d2975a4a05252aef33ae70e8f74d287a20c8083c950",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "d685773f6473e69a4e96e94ade27dc379f73417138fcc883053506c62909a29b",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "35ffbaa8ae53d95f328d5bec654a84d19ea2cab53bed62308761bd27dfeac92f",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "205ea59319751968c32bb42eb4ac05c2f503ba1e72f8274b3687562167b1f210",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "a98234e9b9ba54a29e48e9d6e325e12e09ecb94ef939a026f7323c292a26b814",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "6dc351084788bbb0cbb14267b23089772e74befed484bfe43512289ebbc0dfa6",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "04d556d95668377705cc7b1690ea9db5391dfc94bea6d3deb9efc0da8084550e",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "9caeb4c2bf8a38272e884b199cafd2a7da7be7053b16dc231b49ad309068c6b3",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      },
+      {
+        "prompt_sha256": "3d3c86f88c8050c33265425695aedfac6c8a99040b46737dcebd106d177c2a7a",
+        "provenance": "initial_live_run",
+        "structured_verdict": true
+      }
+    ],
+    "refreshed_output_cells": [
+      119,
+      129,
+      136,
+      139,
+      143,
+      146,
+      150
+    ],
+    "finished_utc": "2026-10-05T23:42:11.849637+00:00"
+  },
+  "reflection_cells": {
+    "141": "**Interpretation of the measured scorecard**\n\nThe agent passed 11/24 questions (45.8%) versus 10/24 (41.7%) for naive RAG, and its mean judge score was 0.750 versus 0.562. The largest gains were web-current questions (3/3 versus 0/3 deterministic passes) and hybrid questions (2/3 versus 0/3), while naive RAG did better on PDF-only factual cases (7/12 versus the agent's 5/12). The agent used 1.54 calls per question versus 1.00, and averaged 5.72s versus 1.96s; the benchmark includes one documented retry of a transient authentication failure, with the initial attempt preserved.",
+    "147": "**Failure analysis from the saved live run**\n\n| Case | Symptom | Confirmed root cause | Targeted fix |\n| --- | --- | --- | --- |\n| `gold_04`, Q2 free cash flow | Reported positive $5,762 million instead of negative $1,092 million | The retrieved Update p.31 chunk contained the TTM row, while the quarterly row was outside the returned passage; synthesis used the wrong period | Retrieve the quarterly Financial Summary/reconciliation with row and column headers; reject TTM for a quarterly question |\n| `gold_05`, storage deployed | Reported 22.3 GWh instead of Q2's 13.5 GWh | Three searches omitted the quarterly row and returned 10-Q p.35 saying 22.3 GWh **through the second quarter**, which the answer relabeled as Q2 alone | Target the Update p.5 Operational Summary and preserve period headers; validate cumulative versus three-month figures |\n| `gold_07`, FY2025 energy gross profit | Said the gross-profit figure was not directly disclosed | One query retrieved 29.8% gross-margin discussion on 10-K p.66 without $3,802 million, although the gross-profit table exists on pp.64/145 | Require a second distinct segment-table search before a refusal and improve table chunk boundaries |\n| `gold_02`, total GAAP gross margin; **scored disagreement** | Deterministic fail, judge `correct`, despite an accurate 16.8% answer | The answer cites the valid 10-Q p.39; the file whitelist expects only the Update deck, and the evidence string has `16.8 %` rather than `16.8%` | Keep the rubric score but add normalized evidence checks and independent validation of any valid supplied file/page |\n\nFor `gold_02`, I agree with the judge about the requested figure: independent extraction of the cited 10-Q p.39 confirms the Q2 total gross margin. Its automatic “retrieval miss” label is therefore a lexical/file-check limitation, not evidence that the figure was absent from the passage. The hard errors in `gold_04`–`gold_07` are supported by their saved queries, contexts, answers and judge reasoning; the source audit identifies the correct figures independently.\n\nThe judge also needs review. In `gold_18`, it claimed that an answer confirmed 13.5 GWh and lacked URLs, although the text omitted 13.5 and contained URLs; in `gold_20`, it accepted October-dated articles for a September-news question without establishing September event dates. These findings leave the raw judge scores unchanged and show why a strong model's verdict is not an independent fact check. The original generated report and its period/citation mistakes are retained separately from the reviewed final report.\n",
+    "152": "**Key takeaways**\n\n- The manual LangGraph agent adds useful source coverage: web-current and hybrid deterministic passes were 3/3 and 2/3, compared with 0/3 in both categories for document-only RAG. Overall judge scores were 0.750 versus 0.562; these are outcomes on 24 supplied questions, not a general accuracy guarantee.\n- Tool access does not guarantee better PDF retrieval. The gold figure appeared lexically in 50.0% of the agent's numeric trajectories versus 61.1% for naive RAG. FCF, storage deployment and gross-profit failures show that query choice, table boundaries and period interpretation matter as much as the model.\n- Deterministic and scored-judge decisions agreed on 40/48 answers (83.3%), but `gold_02` exposes strict-file/spacing false negatives and `gold_18`/`gold_20` expose judge reasoning/date weaknesses. The source audit and human review remain necessary.\n- The checkpoint recovered one transient runtime authentication failure while preserving the other 47 completed roles. Initial results, the retry trajectory, and reused-versus-fresh judge provenance are retained; wrong but successfully generated answers were not silently repaired.",
+    "154": "**Expected business impact for Allied FinServ**\n\n- **Analyst effort:** the agent produced a source-backed first pass in 5.72s per benchmark question on average, compared with 1.96s for naive RAG. This measures machine response time; analyst time saved, review time, ROI and production turnaround were not measured.\n- **Reviewability:** saved tool arguments, returned passages, file/page labels, scorecards and the preserved original report let an analyst trace and correct a claim. The reviewed report demonstrates the intended review workflow, while the original errors remain visible.\n- **Freshness:** the agent can reach dated web sources that document-only RAG cannot; all three web-current cases passed the prescribed checks. The September/October mismatch in `gold_20` means dates still require validation before use in a client-facing brief.\n- **Coverage:** the agent combined company filings with competitor web evidence in two of three hybrid cases, whereas the baseline passed none. This could broaden competitive monitoring; consistent company, period and BEV-versus-total-sales definitions still require analyst oversight.",
+    "156": "**Prioritized workflow improvements**\n\n1. Preserve complete financial table headers and rows, suppress title-only chunks, and add targeted quarterly/segment-table queries. This addresses the observed FCF TTM mix-up, H1 storage substitution and missed $3,802 million gross-profit row.\n2. Validate each numeric claim against its exact cited page, including company, sign, unit and reporting period. Check dated web items against the requested time window and prefer primary releases; this would catch the report's citation errors and the September/October issue.\n3. Retain the assessed deterministic metrics, but add normalized whitespace, supported-source/page and refusal-semantic checks. Calibrate the judge with the actual `gold_02`, `gold_18` and `gold_20` discrepancies rather than relying only on two period-swap examples.\n4. Keep bounded transient-error recovery, configuration fingerprints, separate runtime/judge status counts and explicit cache provenance. The one recovered authentication failure shows the value of this control, while preserving first-pass content failures prevents misleading improvement claims.\n"
+  },
+  "source_artifact_hashes": {
+    "evaluation_results.json": "0c6e12e90ee3ed1190caacab3eecbba654942e2f3d64096d9ed462d52221758f",
+    "evaluation_trajectories.json": "eb377d2ff3d50d3f1651cd08724dcb55463487f3c075afb5b7e4e018fd3fe2d8",
+    "judge_agreement_metrics.json": "ab1d94dc074c16db9bc25a0a6c9902e2f04fe76ac563b3ef53b8f6719ce6b9d0"
+  }
+}

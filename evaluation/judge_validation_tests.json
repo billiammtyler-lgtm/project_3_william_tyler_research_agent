@@ -1,0 +1,16 @@
+[
+  {
+    "answer": "Tesla's cash, cash equivalents and investments were $43,524 million at June 30, 2026, down from $44,059 million at December 31, 2025 [TSLA-Q2-2026-Update.pdf, p.4].",
+    "expected_verdict": "correct",
+    "actual_verdict": "correct",
+    "reasoning": "The answer provides the most recent figure for Tesla's cash, cash equivalents, and investments position as $43,524 million at the end of Q2 2026 (June 30, 2026), which matches the reference. It also correctly notes the earlier figure of $44,059 million at December 31, 2025, as required by the reference. Both the values and their respective dates are accurately reported, and there is no invented or contradicting information.",
+    "deterministic_figure_ok": true
+  },
+  {
+    "answer": "Tesla's cash, cash equivalents and investments were $44,059 million at June 30, 2026, up from $43,524 million at December 31, 2025 [TSLA-Q2-2026-Update.pdf, p.4].",
+    "expected_verdict": "incorrect",
+    "actual_verdict": "incorrect",
+    "reasoning": "The answer provides figures for Tesla's cash, cash equivalents, and investments, but it incorrectly states the values and their respective dates. The reference indicates that the most recent figure is $43,524 million at the end of Q2 2026, while the answer incorrectly states it as $44,059 million. Additionally, the answer reverses the trend, stating an increase instead of a decrease. This contradicts the reference data, making the answer incorrect.",
+    "deterministic_figure_ok": true
+  }
+]
